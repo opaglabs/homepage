@@ -2,6 +2,7 @@ import App from './App.vue'
 import { createSSRApp } from 'vue'
 import { createRouter } from './router'
 import { createStore } from './store'
+import { sync } from 'vuex-router-sync';
 import './assets/css/index.css'
 
 // SSR requires a fresh app instance per request, therefore we export a function
@@ -11,6 +12,9 @@ export function createApp() {
   const app = createSSRApp(App)
   const router = createRouter()
   const store = createStore()
+
+  sync(store, router);
+
   app.use(router)
   app.use(store)
 

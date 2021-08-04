@@ -13,7 +13,7 @@
               :key="projeto.title"
               class="relative shadow hover:shadow-lg bg-white rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="`text-${color}-700`">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{[`text-${color}-700`]: true}">
                 {{ projeto.title }}
               </h1>
               <small class="text-gray-500 text-xs font-semibold">
@@ -35,7 +35,7 @@
             <div
               class="relative shadow hover:shadow-lg cursor-pointer bg-gray-100 rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="`text-${color}-700`">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{[`text-${color}-700`]: true}">
                 Seu Projeto
               </h1>
               <small class="text-gray-500 text-xs font-semibold">
@@ -48,7 +48,7 @@
               <p class="text-md mb-10">
               </p>
               <div class="rounded-md shadow absolute bottom-3">
-                <router-link to="/contato" class="w-full flex items-center justify-center px-3 py-0 border border-transparent text-base font-medium rounded-md text-white pb-1" :class="`bg-${color}-600 hover:bg-${color}-600`">
+                <router-link to="/contato" class="w-full flex items-center justify-center px-3 py-0 border border-transparent text-base font-medium rounded-md text-white pb-1" :class="{[`bg-${color}-600 hover:bg-${color}-600`]: true}">
                   Entre em contato hoje mesmo
                 </router-link>
               </div>
@@ -68,7 +68,7 @@
               :key="projeto.title"
               class="shadow hover:shadow-lg bg-white rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="`text-${color}-700`">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{[`text-${color}-700`]: true}">
                 {{ projeto.title }}
               </h1>
               <small class="text-gray-500 text-xs font-semibold">
@@ -93,7 +93,7 @@
               :key="projeto.title"
               class="relative shadow hover:shadow-lg bg-white rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="`text-${color}-700`">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{[`text-${color}-700`]: true}">
                 {{ projeto.title }}
               </h1>
               <p class="text-md">
@@ -105,7 +105,7 @@
             </div>
           </div>
           <p class="text-md mt-5">
-            Veja mais projetos <a class="hover:underline" :class="`text-${color}-700`" href="https://github.com/otavio-paganotti" target="_blank">clicando aqui</a>.
+            Veja mais projetos <a class="hover:underline" :class="{[`text-${color}-700`]: true}" href="https://github.com/otavio-paganotti" target="_blank">clicando aqui</a>.
           </p>
         </div>
       </section>

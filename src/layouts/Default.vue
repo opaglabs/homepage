@@ -9,7 +9,7 @@
               <div class="flex items-center justify-between w-full md:w-auto">
                 <router-link to="/">
                   <span class="sr-only">Op.ag Logo</span>
-                  <img src="../assets/logo-block.svg" class="cover h-20 w-auto sm:h-28 rounded-xl" :class="{[`bg-${color}-600`]: true}" />
+                  <img src="../assets/logo-block.svg" class="cover h-20 w-auto sm:h-28 rounded-xl" :class="[`bg-${color}-600`]" />
                 </router-link>
                 <div class="-mr-2 flex items-center md:hidden">
                 </div>
@@ -21,7 +21,7 @@
                 :key="item.name"
                 :to="item.href"
                 class="px-4 py-1 font-medium text-gray-500 hover:text-gray-900"
-                :active-class="{[`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`]: true}"
+                :active-class="[`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`]"
               >
                 {{ item.name }}
               </router-link>

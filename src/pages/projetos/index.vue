@@ -13,7 +13,15 @@
               :key="projeto.title"
               class="relative shadow hover:shadow-lg bg-white rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="[`text-${color}-700`]">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
+                'text-red-700': color === 'red',
+                'text-yellow-700': color === 'yellow',
+                'text-green-700': color === 'green',
+                'text-blue-700': color === 'blue',
+                'text-indigo-700': color === 'indigo',
+                'text-purple-700': color === 'purple',
+                'text-pink-700': color === 'pink',
+              }">
                 {{ projeto.title }}
               </h1>
               <small class="text-gray-500 text-xs font-semibold">
@@ -35,7 +43,15 @@
             <div
               class="relative shadow hover:shadow-lg cursor-pointer bg-gray-100 rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="[`text-${color}-700`]">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
+                'text-red-700': color === 'red',
+                'text-yellow-700': color === 'yellow',
+                'text-green-700': color === 'green',
+                'text-blue-700': color === 'blue',
+                'text-indigo-700': color === 'indigo',
+                'text-purple-700': color === 'purple',
+                'text-pink-700': color === 'pink',
+              }">
                 Seu Projeto
               </h1>
               <small class="text-gray-500 text-xs font-semibold">
@@ -48,7 +64,15 @@
               <p class="text-md mb-10">
               </p>
               <div class="rounded-md shadow absolute bottom-3">
-                <router-link to="/contato" class="w-full flex items-center justify-center px-3 py-0 border border-transparent text-base font-medium rounded-md text-white pb-1" :class="[`bg-${color}-600 hover:bg-${color}-600`]">
+                <router-link to="/contato" class="w-full flex items-center justify-center px-3 py-0 border border-transparent text-base font-medium rounded-md text-white pb-1" :class="{
+                  'bg-red-600 hover:bg-red-600': color === 'red',
+                  'bg-yellow-600 hover:bg-yellow-600': color === 'yellow',
+                  'bg-green-600 hover:bg-green-600': color === 'green',
+                  'bg-blue-600 hover:bg-blue-600': color === 'blue',
+                  'bg-indigo-600 hover:bg-indigo-600': color === 'indigo',
+                  'bg-purple-600 hover:bg-purple-600': color === 'purple',
+                  'bg-pink-600 hover:bg-pink-600': color === 'pink',
+                }">
                   Entre em contato hoje mesmo
                 </router-link>
               </div>
@@ -68,7 +92,15 @@
               :key="projeto.title"
               class="shadow hover:shadow-lg bg-white rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="[`text-${color}-700`]">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
+                'text-red-700': color === 'red',
+                'text-yellow-700': color === 'yellow',
+                'text-green-700': color === 'green',
+                'text-blue-700': color === 'blue',
+                'text-indigo-700': color === 'indigo',
+                'text-purple-700': color === 'purple',
+                'text-pink-700': color === 'pink',
+              }">
                 {{ projeto.title }}
               </h1>
               <small class="text-gray-500 text-xs font-semibold">
@@ -93,7 +125,15 @@
               :key="projeto.title"
               class="relative shadow hover:shadow-lg bg-white rounded-md p-4"
             >
-              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="[`text-${color}-700`]">
+              <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
+                'text-red-700': color === 'red',
+                'text-yellow-700': color === 'yellow',
+                'text-green-700': color === 'green',
+                'text-blue-700': color === 'blue',
+                'text-indigo-700': color === 'indigo',
+                'text-purple-700': color === 'purple',
+                'text-pink-700': color === 'pink',
+              }">
                 {{ projeto.title }}
               </h1>
               <p class="text-md">
@@ -105,7 +145,15 @@
             </div>
           </div>
           <p class="text-md mt-5">
-            Veja mais projetos <a class="hover:underline" :class="[`text-${color}-700`]" href="https://github.com/otavio-paganotti" target="_blank">clicando aqui</a>.
+            Veja mais projetos <a class="hover:underline" :class="{
+              'text-red-700': color === 'red',
+                'text-yellow-700': color === 'yellow',
+                'text-green-700': color === 'green',
+                'text-blue-700': color === 'blue',
+                'text-indigo-700': color === 'indigo',
+                'text-purple-700': color === 'purple',
+                'text-pink-700': color === 'pink',
+            }" href="https://github.com/otavio-paganotti" target="_blank">clicando aqui</a>.
           </p>
         </div>
       </section>

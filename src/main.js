@@ -13,5 +13,8 @@ export function createApp() {
   const store = createStore()
   app.use(router)
   app.use(store)
+
   return { app, router, store }
 }
+
+//     "dep-import-type": "link:./dep-import-type",

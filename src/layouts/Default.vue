@@ -38,15 +38,7 @@
                 :key="item.name"
                 :to="item.href"
                 class="px-4 py-1 font-medium text-gray-500 hover:text-gray-900"
-                :active-class="{
-                  'rounded-xl text-red-600 bg-red-100 hover:bg-red-200 hover:text-red-600': color === 'red',
-                  'rounded-xl text-yellow-600 bg-yellow-100 hover:bg-yellow-200 hover:text-yellow-600': color === 'yellow',
-                  'rounded-xl text-green-600 bg-green-100 hover:bg-green-200 hover:text-green-600': color === 'green',
-                  'rounded-xl text-blue-600 bg-blue-100 hover:bg-blue-200 hover:text-blue-600': color === 'blue',
-                  'rounded-xl text-indigo-600 bg-indigo-100 hover:bg-indigo-200 hover:text-indigo-600': color === 'indigo',
-                  'rounded-xl text-purple-600 bg-purple-100 hover:bg-purple-200 hover:text-purple-600': color === 'purple',
-                  'rounded-xl text-pink-600 bg-pink-100 hover:bg-pink-200 hover:text-pink-600': color === 'pink',
-                }"
+                :active-class="`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`"
               >
                 {{ item.name }}
               </router-link>

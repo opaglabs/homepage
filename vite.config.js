@@ -1,37 +1,13 @@
-const vuePlugin = require('@vitejs/plugin-vue')
-const vueJsx = require('@vitejs/plugin-vue-jsx')
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 const path = require('path')
 
-/**
- * @type {import('vite').UserConfig}
- */
-module.exports = {
-  plugins: [
-    vuePlugin(),
-    vueJsx(),
-    {
-      name: 'virtual',
-      resolveId(id) {
-        if (id === '@foo') {
-          return id
-        }
-      },
-      load(id) {
-        if (id === '@foo') {
-          return `export default { msg: 'hi' }`
-        }
-      }
-    },
-  ],
-  build: {
-    minify: false
-  },
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-  },
-  server: {
-    port: 3001
   }
-}
+})

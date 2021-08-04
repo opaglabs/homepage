@@ -31,4 +31,7 @@ module.exports = {
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    port: 3001
+  }
 }

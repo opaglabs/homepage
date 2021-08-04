@@ -257,7 +257,7 @@ export default {
     ],
   }),
   computed: {
-    ...mapGetters("system", ["color"]),
+    ...mapGetters(["color"]),
   },
 };
 </script>

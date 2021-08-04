@@ -1,10 +1,20 @@
 import { createStore } from 'vuex'
-import system from './modules/system'
+// import system from './modules/system'
 
 
 export default createStore({
-  modules: {
-    system
+  state: {
+    color: 'pink'
   },
-  strict: false
+  mutations: {
+    color(state, color) {
+      state.color = color;
+    }
+  },
+  getters: {
+    color(state) {
+      return state.color;
+    }
+  },
+  // strict: false
 })

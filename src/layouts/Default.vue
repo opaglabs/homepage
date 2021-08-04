@@ -89,10 +89,10 @@ export default {
     ]
   }),
   computed: {
-    ...mapGetters('system', ['color'])
+    ...mapGetters(['color'])
   },
   created () {
-    this.$store.commit('system/color', this.colors[Math.floor(Math.random() * this.colors.length)])
+    this.$store.commit('color', this.colors[Math.floor(Math.random() * this.colors.length)])
   }
 }
 </script>

@@ -219,7 +219,7 @@
       ]
     }),
     computed: {
-      ...mapGetters('system', ['color'])
+      ...mapGetters(['color'])
     },
   }
 </script>

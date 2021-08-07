@@ -20,7 +20,7 @@
       </p>
       <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
         <div class="rounded-md shadow">
-          <router-link to="/contato" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10" :class="{
+          <router-link to="/contato" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 relative" v-ripple :class="{
             'bg-red-600 hover:bg-red-600': color === 'red',
             'bg-yellow-600 hover:bg-yellow-600': color === 'yellow',
             'bg-green-600 hover:bg-green-600': color === 'green',
@@ -33,7 +33,7 @@
           </router-link>
         </div>
         <div class="mt-3 sm:mt-0 sm:ml-3">
-          <router-link to="/projetos" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10" :class="{
+          <router-link to="/projetos" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10 relative" v-ripple :class="{
             'text-red-600 bg-red-100 hover:bg-red-200': color === 'red',
             'text-yellow-600 bg-yellow-100 hover:bg-yellow-200': color === 'yellow',
             'text-green-600 bg-green-100 hover:bg-green-200': color === 'green',

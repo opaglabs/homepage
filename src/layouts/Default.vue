@@ -7,7 +7,7 @@
           <nav class="flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex items-center flex-grow flex-shrink-0">
               <div class="flex items-center justify-between w-full md:w-auto">
-                <router-link to="/">
+                <router-link v-ripple class="relative rounded-xl" @click="changeColor" to="/">
                   <span class="sr-only">Op.ag Logo</span>
                   <svg :class="{
                     'bg-red-600': color === 'red',
@@ -37,7 +37,8 @@
                 v-for="item in navigation"
                 :key="item.name"
                 :to="item.href"
-                class="px-4 py-1 font-medium text-gray-500 hover:text-gray-900"
+                class="px-4 py-1 font-medium text-gray-500 hover:text-gray-900 relative"
+                v-ripple
                 :active-class="`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`"
               >
                 {{ item.name }}
@@ -103,13 +104,23 @@ export default {
       'indigo',
       'purple',
       'pink'
-    ]
+    ],
+    lastColor: null
   }),
   computed: {
     ...mapGetters(['color'])
   },
+  methods: {
+    changeColor () {
+      const newColor = this.colors[Math.floor(Math.random() * this.colors.length)]
+
+      if (newColor !== this.lastColor)
+        this.$store.commit('color', this.colors[Math.floor(Math.random() * this.colors.length)])
+      else this.changeColor()
+    }
+  },
   created () {
-    this.$store.commit('color', this.colors[Math.floor(Math.random() * this.colors.length)])
+    this.changeColor()
   }
 }
 </script>

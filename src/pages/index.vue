@@ -48,15 +48,20 @@
       </div>
     </div>
     <div class="hidden md:block w-2/3 h-48">
-      <img class="object-cover w-auto shadow-md hover:shadow-xl rounded-3xl" src="../assets/hero-bg-2.jpg" alt="" />
+      <hero :color="color" class="object-cover w-5/5 rounded-3xl p-5" />
+      <!-- <img class="object-cover w-auto shadow-md hover:shadow-xl rounded-3xl" src="../assets/hero-bg-2.jpg" alt="" /> -->
     </div>
   </main>
 </template>
 
 <script>
+import Hero from '@/components/hero.vue'
 import { mapGetters } from 'vuex'
 
 export default {
+  components: {
+    Hero
+  },
   computed: {
     ...mapGetters(['color'])
   },

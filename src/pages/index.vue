@@ -1,6 +1,6 @@
 <template>
   <div class="snap-y snap-mandatory">
-    <div class="snap-center relative" style="height: calc(100vh - 198px);" id="inicio">
+    <div class="snap-center relative" style="height: calc(100vh - 140px);" id="inicio">
       <main class="max-w-7xl mx-auto relative flex items-start justify-between mt-10 px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div class="sm:text-center lg:text-left">
           <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
@@ -56,22 +56,56 @@
       <div
         class="w-full h-32 lg:h-48 absolute bottom-0"
         :class="{
-          'bg-red-600': color === 'red',
-          'bg-yellow-600': color === 'yellow',
-          'bg-green-600': color === 'green',
-          'bg-blue-600': color === 'blue',
-          'bg-indigo-600': color === 'indigo',
-          'bg-purple-600': color === 'purple',
-          'bg-pink-600': color === 'pink',
+          'text-red-600': color === 'red',
+          'text-yellow-600': color === 'yellow',
+          'text-green-600': color === 'green',
+          'text-blue-600': color === 'blue',
+          'text-indigo-600': color === 'indigo',
+          'text-purple-600': color === 'purple',
+          'text-pink-600': color === 'pink',
         }"
       >
         <div class="w-full grid grid-cols-1 justify-items-center">
-          <p class="text-white mt-4 font-bold">Deslize para baixo</p>
-          <a class="cursor-pointer" href="#o-que-fazemos">
+          <a href="#o-que-fazemos" class="mt-4 font-bold lg:hidden absolute bottom-2 animate-bounce"
+            :class="{
+              'text-red-600': color === 'red',
+              'text-yellow-600': color === 'yellow',
+              'text-green-600': color === 'green',
+              'text-blue-600': color === 'blue',
+              'text-indigo-600': color === 'indigo',
+              'text-purple-600': color === 'purple',
+              'text-pink-600': color === 'pink',
+            }"
+          >Deslize para baixo</a>
+          <a class="hidden lg:block cursor-pointer" href="#o-que-fazemos">
             <div class="relative mt-4">
-              <ChevronDownIcon class="absolute -left-9 w-12 lg:w-16 text-white flex items-start animate-arrow" style="animation-delay:-1s;-webkit-animation-delay:-1s;" />
-              <ChevronDownIcon class="absolute top-6 -left-9 w-12 lg:w-16 text-white flex items-start animate-arrow" style="animation-delay:-0.5s;-webkit-animation-delay:-0.5s;" />
-              <ChevronDownIcon class="absolute top-12 -left-9 w-12 lg:w-16 text-white flex items-start animate-arrow" style="animation-delay:0s;-webkit-animation-delay:0s;" />
+              <ChevronDownIcon class="absolute -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:-1s;-webkit-animation-delay:-1s;" :class="{
+          'text-red-600': color === 'red',
+          'text-yellow-600': color === 'yellow',
+          'text-green-600': color === 'green',
+          'text-blue-600': color === 'blue',
+          'text-indigo-600': color === 'indigo',
+          'text-purple-600': color === 'purple',
+          'text-pink-600': color === 'pink',
+        }" />
+              <ChevronDownIcon class="absolute top-6 -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:-0.5s;-webkit-animation-delay:-0.5s;" :class="{
+          'text-red-600': color === 'red',
+          'text-yellow-600': color === 'yellow',
+          'text-green-600': color === 'green',
+          'text-blue-600': color === 'blue',
+          'text-indigo-600': color === 'indigo',
+          'text-purple-600': color === 'purple',
+          'text-pink-600': color === 'pink',
+        }" />
+              <ChevronDownIcon class="absolute top-12 -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:0s;-webkit-animation-delay:0s;" :class="{
+          'text-red-600': color === 'red',
+          'text-yellow-600': color === 'yellow',
+          'text-green-600': color === 'green',
+          'text-blue-600': color === 'blue',
+          'text-indigo-600': color === 'indigo',
+          'text-purple-600': color === 'purple',
+          'text-pink-600': color === 'pink',
+        }" />
             </div>
           </a>
         </div>

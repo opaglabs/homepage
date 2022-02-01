@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white">
     <div class="max-w-7xl mx-auto">
-      <div class="z-10 pb-8 bg-white w-full">
+      <div class="z-10 bg-white w-full">
         <div class="pt-6 px-4 sm:px-6 lg:px-8">
           <nav class="flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex items-center flex-grow flex-shrink-0">

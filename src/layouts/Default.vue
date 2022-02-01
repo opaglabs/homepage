@@ -1,8 +1,7 @@
 <template>
   <div class="bg-white">
     <div class="max-w-7xl mx-auto">
-      <div class="z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
-
+      <div class="z-10 pb-8 bg-white w-full">
         <div class="pt-6 px-4 sm:px-6 lg:px-8">
           <nav class="flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex items-center flex-grow flex-shrink-0">
@@ -37,7 +36,16 @@
                 v-for="item in navigation"
                 :key="item.name"
                 :to="item.href"
-                class="px-4 py-1 font-medium text-gray-500 hover:text-gray-900 relative"
+                class="px-4 py-2 font-medium relative border rounded-xl"
+                :class="{
+                  'border-red-600 text-red-600': color === 'red',
+                  'border-yellow-600 text-yellow-600': color === 'yellow',
+                  'border-green-600 text-green-600': color === 'green',
+                  'border-blue-600 text-blue-600': color === 'blue',
+                  'border-indigo-600 text-indigo-600': color === 'indigo',
+                  'border-purple-600 text-purple-600': color === 'purple',
+                  'border-pink-600 text-pink-600': color === 'pink',
+                }"
                 v-ripple
                 :active-class="`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`"
               >
@@ -47,19 +55,19 @@
             </div>
           </nav>
         </div>
-        <router-view v-slot="{ Component }">
-          <transition name="scale" mode="out-in">
-            <component :is="Component" />
-          </transition>
-        </router-view>
-        <!-- <router-view /> -->
       </div>
+    </div>
+    <div class="relative">
+      <router-view v-slot="{ Component }">
+        <transition name="scale" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
 
 <script>
-// import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 import { mapGetters } from 'vuex'
 
@@ -72,28 +80,9 @@ const navigation = [
 
 export default {
   components: {
-    // Popover: () => import.meta.env.SSR ? Popover : '<div>Loading...</div>',
-    // PopoverButton,
-    // PopoverPanel,
     MenuIcon,
     XIcon
   },
-  // setup() {
-  //   const colors = [
-  //     'red',
-  //     'yellow',
-  //     'green',
-  //     'blue',
-  //     'indigo',
-  //     'purple',
-  //     'pink'
-  //   ]
-  //   const color = colors[Math.floor(Math.random() * colors.length)]
-  //   return {
-  //     navigation,
-  //     color
-  //   }
-  // },
   data: () => ({
     navigation,
     colors: [
@@ -117,10 +106,21 @@ export default {
       if (newColor !== this.lastColor)
         this.$store.commit('color', this.colors[Math.floor(Math.random() * this.colors.length)])
       else this.changeColor()
+    },
+    handleScroll(el) {
+      console.log(el.scrollTop);
     }
   },
   created () {
     this.changeColor()
+  },
+  mounted() {
+    const content = document.getElementById('content');
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    const content = document.getElementById('content');
+    document.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>

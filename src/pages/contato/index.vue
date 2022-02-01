@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen p-10 md:p-0 md:px-8 md:mt-10">
+  <div class="max-w-7xl mx-auto min-h-screen p-10 md:p-0 md:px-8 md:mt-10">
     <div class="w-full space-y-16 md:space-y-32">
       <section>
         <div class="md:w-full z-50 sticky top-0 py-4 bg-white mb-5 md:mb-0">

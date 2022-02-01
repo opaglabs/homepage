@@ -1,8 +1,33 @@
 module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'arrow': {
+          '0%': {
+            'opacity': '0'
+          },
+          '40%': {
+            'opacity': '1'
+          },
+          '80%': {
+            'opacity': '0'
+          },
+          '100%': {
+            'opacity': '0'
+          },
+        },
+      },
+      animation: {
+        'arrow': 'arrow 2s infinite',
+      },
+      animationDelay: {
+        '-1000ms': '-1000ms',
+        '-500ms': '-500ms',
+        '0ms': '0ms',
+      }
+    },
   },
   variants: {
     extend: {},

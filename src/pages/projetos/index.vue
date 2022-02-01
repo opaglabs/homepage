@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen p-10 md:p-0 md:px-8 md:mt-10">
+  <div class="max-w-7xl mx-auto min-h-screen p-10 md:p-0 md:px-8 md:mt-10">
     <div class="w-full space-y-16 md:space-y-32">
 
       <section class="md:flex md:space-x-10 items-start">
@@ -64,7 +64,7 @@
               <p class="text-md mb-10">
               </p>
               <div class="rounded-md shadow absolute bottom-3">
-                <router-link to="/contato" class="w-full flex items-center justify-center px-3 py-0 border border-transparent text-base font-medium rounded-md text-white pb-1" :class="{
+                <router-link to="/#vamos-trabalhar-juntos" class="w-full flex items-center justify-center px-3 py-0 border border-transparent text-base font-medium rounded-md text-white pb-1" :class="{
                   'bg-red-600 hover:bg-red-600': color === 'red',
                   'bg-yellow-600 hover:bg-yellow-600': color === 'yellow',
                   'bg-green-600 hover:bg-green-600': color === 'green',

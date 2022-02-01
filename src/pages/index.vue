@@ -1,7 +1,7 @@
 <template>
-  <div class="snap-y snap-mandatory">
-    <div class="snap-center relative" style="height: calc(100vh - 140px);" id="inicio">
-      <main class="max-w-7xl mx-auto relative flex items-start justify-between mt-10 px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+  <div class="grid grid-cols-1 gap-4">
+    <main class="max-w-7xl mx-auto h-screen p-4 lg:p-0">
+      <div class="relative flex items-start justify-between lg:mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
         <div class="sm:text-center lg:text-left">
           <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span class="block xl:inline">Engenharia de Software,</span>
@@ -20,7 +20,7 @@
             Acreditamos em uma nova forma de computação, onde os sistemas deixam de ser engessados. Dessa forma, nosso desenvolvimento é aplicado 100% ao contexto do seu negócio. Bem-vindo à Computação Aconselhada.
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
+            <div class="hidden lg:block rounded-md shadow">
               <router-link to="/contato" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 relative" v-ripple :class="{
                 'bg-red-600 hover:bg-red-600': color === 'red',
                 'bg-yellow-600 hover:bg-yellow-600': color === 'yellow',
@@ -52,22 +52,25 @@
           <hero :color="color" class="object-cover w-5/5 rounded-3xl p-5" />
           <!-- <img class="object-cover w-auto shadow-md hover:shadow-xl rounded-3xl" src="../assets/hero-bg-2.jpg" alt="" /> -->
         </div>
-      </main>
-      <div
-        class="w-full h-32 lg:h-48 absolute bottom-0"
-        :class="{
-          'text-red-600': color === 'red',
-          'text-yellow-600': color === 'yellow',
-          'text-green-600': color === 'green',
-          'text-blue-600': color === 'blue',
-          'text-indigo-600': color === 'indigo',
-          'text-purple-600': color === 'purple',
-          'text-pink-600': color === 'pink',
-        }"
-      >
-        <div class="w-full grid grid-cols-1 justify-items-center">
-          <a href="#o-que-fazemos" class="mt-4 font-bold lg:hidden absolute bottom-2 animate-bounce"
-            :class="{
+      </div>
+    </main>
+    <div
+      class="w-full absolute bottom-14">
+      <div class="w-full grid grid-cols-1 justify-items-center">
+        <a href="#o-que-fazemos" class="mt-4 font-bold lg:hidden absolute top-1 animate-bounce"
+          :class="{
+            'text-red-600': color === 'red',
+            'text-yellow-600': color === 'yellow',
+            'text-green-600': color === 'green',
+            'text-blue-600': color === 'blue',
+            'text-indigo-600': color === 'indigo',
+            'text-purple-600': color === 'purple',
+            'text-pink-600': color === 'pink',
+          }"
+        >Deslize para baixo</a>
+        <a class="hidden lg:block cursor-pointer absolute bottom-12" href="#o-que-fazemos">
+          <div class="relative mt-4">
+            <ChevronDownIcon class="absolute -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:-1s;-webkit-animation-delay:-1s;" :class="{
               'text-red-600': color === 'red',
               'text-yellow-600': color === 'yellow',
               'text-green-600': color === 'green',
@@ -75,40 +78,27 @@
               'text-indigo-600': color === 'indigo',
               'text-purple-600': color === 'purple',
               'text-pink-600': color === 'pink',
-            }"
-          >Deslize para baixo</a>
-          <a class="hidden lg:block cursor-pointer" href="#o-que-fazemos">
-            <div class="relative mt-4">
-              <ChevronDownIcon class="absolute -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:-1s;-webkit-animation-delay:-1s;" :class="{
-          'text-red-600': color === 'red',
-          'text-yellow-600': color === 'yellow',
-          'text-green-600': color === 'green',
-          'text-blue-600': color === 'blue',
-          'text-indigo-600': color === 'indigo',
-          'text-purple-600': color === 'purple',
-          'text-pink-600': color === 'pink',
-        }" />
-              <ChevronDownIcon class="absolute top-6 -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:-0.5s;-webkit-animation-delay:-0.5s;" :class="{
-          'text-red-600': color === 'red',
-          'text-yellow-600': color === 'yellow',
-          'text-green-600': color === 'green',
-          'text-blue-600': color === 'blue',
-          'text-indigo-600': color === 'indigo',
-          'text-purple-600': color === 'purple',
-          'text-pink-600': color === 'pink',
-        }" />
-              <ChevronDownIcon class="absolute top-12 -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:0s;-webkit-animation-delay:0s;" :class="{
-          'text-red-600': color === 'red',
-          'text-yellow-600': color === 'yellow',
-          'text-green-600': color === 'green',
-          'text-blue-600': color === 'blue',
-          'text-indigo-600': color === 'indigo',
-          'text-purple-600': color === 'purple',
-          'text-pink-600': color === 'pink',
-        }" />
-            </div>
-          </a>
-        </div>
+            }" />
+            <ChevronDownIcon class="absolute top-6 -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:-0.5s;-webkit-animation-delay:-0.5s;" :class="{
+              'text-red-600': color === 'red',
+              'text-yellow-600': color === 'yellow',
+              'text-green-600': color === 'green',
+              'text-blue-600': color === 'blue',
+              'text-indigo-600': color === 'indigo',
+              'text-purple-600': color === 'purple',
+              'text-pink-600': color === 'pink',
+            }" />
+            <ChevronDownIcon class="absolute top-12 -left-9 w-12 lg:w-16 flex items-start animate-arrow" style="animation-delay:0s;-webkit-animation-delay:0s;" :class="{
+              'text-red-600': color === 'red',
+              'text-yellow-600': color === 'yellow',
+              'text-green-600': color === 'green',
+              'text-blue-600': color === 'blue',
+              'text-indigo-600': color === 'indigo',
+              'text-purple-600': color === 'purple',
+              'text-pink-600': color === 'pink',
+            }" />
+          </div>
+        </a>
       </div>
     </div>
     <div class="snap-center lg:h-screen w-full" id="o-que-fazemos">
@@ -146,7 +136,7 @@
           <h1 class="text-5xl text-white p-8">O que fazemos?</h1>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto mt-14">
+      <div class="max-w-7xl mx-auto lg:mt-14 p-4 lg:p-0">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div
             v-for="i in 6"
@@ -160,7 +150,7 @@
         </div>
       </div>
     </div>
-    <hr />
+    <!-- <hr />
     <div class="snap-center lg:h-screen w-full relative" id="vamos-trabalhar-juntos">
       <div
         class="w-full h-48 flex justify-center items-center"
@@ -239,7 +229,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

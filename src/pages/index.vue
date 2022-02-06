@@ -184,7 +184,7 @@
             />
 
             <button
-              class="w-full text-white rounded-xl p-4 text-xl font-bold mt-4"
+              class="w-full text-white rounded-xl p-4 text-xl font-bold mt-4 relative"
               v-ripple
               :class="{
                 'bg-red-600': color === 'red',

@@ -24,7 +24,7 @@
             100% ao contexto do seu negócio. Bem-vindo à Computação Aconselhada.
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="hidden lg:block rounded-md shadow">
+            <div class="rounded-md shadow">
               <router-link
                 to="/contato"
                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 relative"
@@ -90,17 +90,18 @@
         </div>
       </div>
     </main>
-    <div class="w-full absolute bottom-14">
+    <div class="w-full absolute bottom-14" v-if="showButton">
       <div class="w-full grid grid-cols-1 justify-items-center">
-        <a
-          href="#o-que-fazemos"
-          class="mt-4 font-bold lg:hidden absolute top-1 animate-bounce"
+        <div
+          @click="handleClick"
+          class="mt-6 font-bold lg:hidden absolute top-1 animate-bounce bg-white px-2 py-1 rounded shadow-2xl"
           :class="returnColor"
-          >Deslize para baixo</a
         >
-        <a
+          Deslize para baixo
+        </div>
+        <div
           class="hidden lg:block cursor-pointer absolute bottom-12"
-          href="#o-que-fazemos"
+          @click="handleClick"
         >
           <div class="relative mt-4">
             <ChevronDownIcon
@@ -119,7 +120,7 @@
               :class="returnColor"
             />
           </div>
-        </a>
+        </div>
       </div>
     </div>
     <div class="snap-center lg:h-screen w-full" id="o-que-fazemos">
@@ -154,54 +155,7 @@
         </div>
       </div>
     </div>
-    <div class="snap-center lg:h-screen w-full relative" id="vamos-trabalhar-juntos">
-      <section-title title="Vamos trabalhar juntos?" />
-
-      <div class="max-w-screen-md mx-auto lg:mt-14 p-4 lg:p-0">
-        <div class="grid grid-cols-1 content-center">
-          <div>
-            <x-input
-              v-model="contact_name"
-              label="Digite seu nome"
-              input-name="contact_name"
-            />
-            <x-input
-              v-model="contact_email"
-              label="Digite seu melhor e-mail"
-              type="email"
-              input-name="contact_email"
-            />
-            <x-input
-              v-model="contact_company"
-              label="Qual o nome da sua empresa?"
-              input-name="contact_company"
-            />
-            <x-input
-              v-model="contact_message"
-              label="Escreva sua mensagem"
-              type="textarea"
-              input-name="contact_message"
-            />
-
-            <button
-              class="w-full text-white rounded-xl p-4 text-xl font-bold mt-4 relative"
-              v-ripple
-              :class="{
-                'bg-red-600': color === 'red',
-                'bg-yellow-600': color === 'yellow',
-                'bg-green-600': color === 'green',
-                'bg-blue-600': color === 'blue',
-                'bg-indigo-600': color === 'indigo',
-                'bg-purple-600': color === 'purple',
-                'bg-pink-600': color === 'pink',
-              }"
-            >
-              Vamos nessa!
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <WorkTogether />
   </div>
 </template>
 
@@ -209,7 +163,7 @@
 import Hero from "@/components/hero.vue";
 import XInput from "@/components/XInput.vue";
 import { ChevronDownIcon, ChevronDoubleRightIcon } from "@heroicons/vue/outline";
-import { mapGetters } from "vuex";
+import { useStore } from "vuex";
 import SectionTitle from '@/components/section-title.vue';
 import step1 from "@/components/step1.vue";
 import step2 from "@/components/step2.vue";
@@ -217,6 +171,8 @@ import step3 from "@/components/step3.vue";
 import step4 from "@/components/step4.vue";
 import step5 from "@/components/step5.vue";
 import step6 from "@/components/step6.vue";
+import WorkTogether from "../components/work-together.vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 
 export default {
   components: {
@@ -225,17 +181,20 @@ export default {
     ChevronDoubleRightIcon,
     SectionTitle,
     XInput,
+    WorkTogether
   },
-  computed: {
-    ...mapGetters(["color"]),
-    steps() {
-      return [
+  setup() {
+    const store = useStore();
+
+    const color = computed(() => store.getters.color);
+
+    const steps = computed(() => [
         {
           title: 'Levantamento de Requisitos',
           description: 'Vamos entender seu problema e definir os requisitos necessários para o seu negócio.',
           image: step1,
           class: [
-            this.returnColor,
+            returnColor.value,
             'w-32'
           ]
         },
@@ -244,7 +203,7 @@ export default {
           description: 'Vamos definir o cenário de negócio e definir o fluxo de trabalho.',
           image: step2,
           class: [
-            this.returnColor,
+            returnColor.value,
             'w-32'
           ]
         },
@@ -253,7 +212,7 @@ export default {
           description: 'Proposta de negócio é apresentada para o cliente e aprovação do mesmo.',
           image: step3,
           class: [
-            this.returnColor,
+            returnColor.value,
             'w-32'
           ]
         },
@@ -262,7 +221,7 @@ export default {
           description: 'Vamos implementar sua solução nos moldes daquilo que foi definido.',
           image: step4,
           class: [
-            this.returnColor,
+            returnColor.value,
             'w-32'
           ]
         },
@@ -271,7 +230,7 @@ export default {
           description: 'Nesta etapa, realizamos os últimos alinhamentos e ajustes da sua aplicação, antes da entrega.',
           image: step5,
           class: [
-            this.returnColor,
+            returnColor.value,
             'w-42'
           ]
         },
@@ -280,30 +239,52 @@ export default {
           description: 'Você sairá feliz com a solução e poderá usá-la da maneira que desejar',
           image: step6,
           class: [
-            this.returnColor,
+            returnColor.value,
             'w-20'
           ]
         },
-      ]
-    },
-    returnColor() {
-      return {
-        'text-red-600': this.color === 'red',
-        'text-yellow-600': this.color === 'yellow',
-        'text-green-600': this.color === 'green',
-        'text-blue-600': this.color === 'blue',
-        'text-indigo-600': this.color === 'indigo',
-        'text-purple-600': this.color === 'purple',
-        'text-pink-600': this.color === 'pink',
-      }
-    }
-  },
-  data() {
-    return {
-      contact_name: "",
-      contact_email: "",
-      contact_company: "",
+      ])
+
+    const returnColor = computed(() => ({
+      'text-red-600': color.value === 'red',
+      'text-yellow-600': color.value === 'yellow',
+      'text-green-600': color.value === 'green',
+      'text-blue-600': color.value === 'blue',
+      'text-indigo-600': color.value === 'indigo',
+      'text-purple-600': color.value === 'purple',
+      'text-pink-600': color.value === 'pink',
+    }));
+
+    const showButton = ref(true);
+
+    const handleClick = () => {
+      document.getElementById('o-que-fazemos').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     };
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > 100) {
+        showButton.value = false;
+      } else {
+        showButton.value = true;
+      }
+    };
+
+    onMounted(() => document.addEventListener('scroll', handleScroll));
+
+    onBeforeUnmount(() => document.removeEventListener('scroll', handleScroll));
+
+    return {
+      handleClick,
+      color,
+      steps,
+      returnColor,
+      showButton
+    }
   },
 };
 </script>

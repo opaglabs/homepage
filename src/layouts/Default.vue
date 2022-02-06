@@ -38,6 +38,11 @@
         </div>
       </div>
     </div>
+    <div v-if="showButton" class="fixed z-50 bottom-4 right-4 lg:bottom-8 lg:right-8">
+      <button v-ripple @click="handleClick" class="border border-white relative rounded-full w-10 h-10 shadow-2xl flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110" :class="returnColor">
+        <ChevronUpIcon class="text-white w-6" />
+      </button>
+    </div>
     <router-view v-slot="{ Component }">
       <transition name="scale" mode="out-in">
         <component :is="Component" />
@@ -47,12 +52,11 @@
 </template>
 
 <script>
-import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { MenuIcon, XIcon, ChevronUpIcon } from '@heroicons/vue/outline'
 import { mapGetters } from 'vuex'
 import Logo from '../components/logo.vue'
 
 const navigation = [
-  // { name: 'Início', href: '/' },
   // { name: 'Sobre', href: '/sobre' },
   { name: 'Projetos', href: '/projetos' },
   { name: 'Contato', href: '/contato' },
@@ -62,6 +66,7 @@ export default {
   components: {
     MenuIcon,
     XIcon,
+    ChevronUpIcon,
     Logo
 },
   data: () => ({
@@ -75,10 +80,22 @@ export default {
       'purple',
       'pink'
     ],
-    lastColor: null
+    lastColor: null,
+    showButton: false,
   }),
   computed: {
-    ...mapGetters(['color'])
+    ...mapGetters(['color']),
+    returnColor() {
+      return {
+        'bg-red-600': this.color === 'red',
+        'bg-yellow-600': this.color === 'yellow',
+        'bg-green-600': this.color === 'green',
+        'bg-blue-600': this.color === 'blue',
+        'bg-indigo-600': this.color === 'indigo',
+        'bg-purple-600': this.color === 'purple',
+        'bg-pink-600': this.color === 'pink',
+      }
+    }
   },
   methods: {
     changeColor () {
@@ -88,19 +105,31 @@ export default {
         this.$store.commit('color', this.colors[Math.floor(Math.random() * this.colors.length)])
       else this.changeColor()
     },
-    handleScroll(el) {
-      console.log(el.scrollTop);
+    handleScroll() {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > 200) {
+        this.showButton = true;
+      } else {
+        this.showButton = false;
+      }
+    },
+    handleClick() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      this.changeColor();
     }
   },
   created () {
     this.changeColor()
   },
   mounted() {
-    const content = document.getElementById('content');
     document.addEventListener('scroll', this.handleScroll);
   },
   beforeUnmount() {
-    const content = document.getElementById('content');
     document.removeEventListener('scroll', this.handleScroll);
   }
 }

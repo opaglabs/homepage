@@ -2,20 +2,7 @@
   <div class="grid grid-cols-1 gap-4 m-4 lg:m-0">
     <div class="bg-white">
       <div class="max-w-7xl mx-auto">
-        <div class="md:w-full z-50 sticky top-0 py-4 bg-white mb-5 md:mb-0">
-        <h1
-          class="
-            text-4xl
-            tracking-tight
-            font-extrabold
-            text-gray-900
-            sm:text-5xl
-            md:text-4xl
-          "
-        >
-          Onde me encontrar?
-        </h1>
-        </div>
+        <SectionTitle title="Onde nos Encontrar?" no-logo />
         <div class="py-4 bg-white mb-5 md:mb-0">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div
@@ -256,73 +243,71 @@
 
 <script>
 import { mapGetters } from "vuex";
+import SectionTitle from "../../components/section-title.vue";
 export default {
-  data: () => ({
-    cardsProjetos: [
-      {
-        title: "AGIL Online",
-        company: "DouraSoft do Brasil",
-        job: "Desenvolvedor de Front-End",
-        description:
-          "Sistema proprietário da empresa DouraSoft do Brasil, que é dedicado para fazer controle financeiro de Casas Lotéricas e Sindicatos.",
-        date: "2017 - 2019",
-        url: "https://app.dourasoft.net",
-      },
-      {
-        title: "Comandas APP",
-        company: "Comandas APP",
-        job: "Desenvolvedor Fullstack & Gestor",
-        description:
-          " Comandas APP surgiu como uma proposta para popularizar a adoção de tecnologias para gestão de bares e restaurantes de maneira que até estabelecimentos das classes D e C poderão desfrutar de alta tecnologia e conseguir escalar seus negócios para patamares nunca antes vistos.",
-        date: "2020 - 2020",
-        url: null,
-      },
-      {
-        title: "Sistema para medir NPS®",
-        company: "DouraSoft do Brasil",
-        job: "Desenvolvedor Fullstack",
-        description:
-          "Com a proposta de realizar pesquisas de lealdade de clientes, esse sistema foi desenvolvido sob medida para um cliente com grande base de clientes, e que precisa acompanhar as métricas o tempo todo para melhorar as estratégias do seu negócio.",
-        date: "2020 - 2020",
-        url: "https://nps.dourasoft.com.br/",
-      },
-      {
-        title: "Kollabity",
-        company: "Kollabity",
-        job: "Desenvolvedor Fullstack",
-        description: "",
-        date: "2020 - 2021",
-        url: "https://kollabity.com",
-      },
-      {
-        title: "Teach Learn",
-        company: "Teach Learn",
-        job: "Desenvolvedor Fullstack",
-        description: "",
-        date: "2021 - Presente",
-        url: "https://app.teachlearn.com.br",
-      },
-      {
-        title: "i9Central",
-        company: "i9tv",
-        job: "Desenvolvedor Front-end",
-        description:
-          "Responsável pela manutenção e dar continuidade no sistema interno da empresa, implementar novas funcionalidades, modernizar estruturas, melhorar experiência do usuário e interface.",
-        date: "2021 - Presente",
-        url: null,
-      },
-      {
-        title: "Untitled Project",
-        company: "Portabilis",
-        job: "Desenvolvedor Front-end",
-        description: "",
-        date: "2021 - Presente",
-        url: null,
-      },
-    ],
-  }),
-  computed: {
-    ...mapGetters(["color"]),
-  },
+    data: () => ({
+        cardsProjetos: [
+            {
+                title: "AGIL Online",
+                company: "DouraSoft do Brasil",
+                job: "Desenvolvedor de Front-End",
+                description: "Sistema proprietário da empresa DouraSoft do Brasil, que é dedicado para fazer controle financeiro de Casas Lotéricas e Sindicatos.",
+                date: "2017 - 2019",
+                url: "https://app.dourasoft.net",
+            },
+            {
+                title: "Comandas APP",
+                company: "Comandas APP",
+                job: "Desenvolvedor Fullstack & Gestor",
+                description: " Comandas APP surgiu como uma proposta para popularizar a adoção de tecnologias para gestão de bares e restaurantes de maneira que até estabelecimentos das classes D e C poderão desfrutar de alta tecnologia e conseguir escalar seus negócios para patamares nunca antes vistos.",
+                date: "2020 - 2020",
+                url: null,
+            },
+            {
+                title: "Sistema para medir NPS®",
+                company: "DouraSoft do Brasil",
+                job: "Desenvolvedor Fullstack",
+                description: "Com a proposta de realizar pesquisas de lealdade de clientes, esse sistema foi desenvolvido sob medida para um cliente com grande base de clientes, e que precisa acompanhar as métricas o tempo todo para melhorar as estratégias do seu negócio.",
+                date: "2020 - 2020",
+                url: "https://nps.dourasoft.com.br/",
+            },
+            {
+                title: "Kollabity",
+                company: "Kollabity",
+                job: "Desenvolvedor Fullstack",
+                description: "",
+                date: "2020 - 2021",
+                url: "https://kollabity.com",
+            },
+            {
+                title: "Teach Learn",
+                company: "Teach Learn",
+                job: "Desenvolvedor Fullstack",
+                description: "",
+                date: "2021 - Presente",
+                url: "https://app.teachlearn.com.br",
+            },
+            {
+                title: "i9Central",
+                company: "i9tv",
+                job: "Desenvolvedor Front-end",
+                description: "Responsável pela manutenção e dar continuidade no sistema interno da empresa, implementar novas funcionalidades, modernizar estruturas, melhorar experiência do usuário e interface.",
+                date: "2021 - Presente",
+                url: null,
+            },
+            {
+                title: "Untitled Project",
+                company: "Portabilis",
+                job: "Desenvolvedor Front-end",
+                description: "",
+                date: "2021 - Presente",
+                url: null,
+            },
+        ],
+    }),
+    computed: {
+        ...mapGetters(["color"]),
+    },
+    components: { SectionTitle }
 };
 </script>

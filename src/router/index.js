@@ -35,5 +35,9 @@ const routes = [
 
 export default createRouter({
   history: createWebHistory(),
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 0 };
+  },
   routes
 })

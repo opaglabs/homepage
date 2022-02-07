@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 gap-4">
-    <main class="max-w-7xl xl:mx-auto xl:h-screen p-4 xl:p-0">
+    <main class="max-w-7xl xl:mx-auto h-screen p-4 xl:p-0">
       <div
         class="relative flex items-start justify-between lg:mt-10 sm:mt-12 md:mt-16"
       >

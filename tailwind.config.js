@@ -26,6 +26,10 @@ module.exports = {
         '-1000ms': '-1000ms',
         '-500ms': '-500ms',
         '0ms': '0ms',
+      },
+      height: {
+        'calc-56': 'calc(100vh - 56px)',
+        'calc-96': 'calc(100vh - 96px)'
       }
     },
   },

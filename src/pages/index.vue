@@ -1,10 +1,10 @@
 <template>
   <div class="grid grid-cols-1 gap-4">
-    <main class="max-w-7xl xl:mx-auto h-screen p-4 xl:p-0">
+    <main class="max-w-7xl xl:mx-auto p-4 h-screen lg:h-calc-96 xl:p-0">
       <div
-        class="relative flex items-start justify-between lg:mt-10 sm:mt-12 md:mt-16"
+        class="flex justify-between lg:items-center h-full"
       >
-        <div class="sm:text-center lg:text-left">
+        <div class="text-left w-full">
           <h1
             class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
           >
@@ -17,13 +17,13 @@
             >
           </h1>
           <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl lg:mx-0"
           >
             Acreditamos em uma nova forma de computação, onde os sistemas deixam
             de ser engessados. Dessa forma, nosso desenvolvimento é aplicado
             100% ao contexto do seu negócio. Bem-vindo à Computação Aconselhada.
           </p>
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <div class="mt-5 sm:mt-8 sm:flex lg:justify-start">
             <div class="rounded-md shadow">
               <router-link
                 to="/contato"
@@ -85,8 +85,8 @@
             <img src="https://via.placeholder.com/120x60/ffb200/000" />
           </div>
         </div> -->
-        <div class="hidden md:block w-2/3 h-48">
-          <hero :color="color" class="object-cover w-5/5 rounded-3xl p-5" />
+        <div class="hidden lg:block w-2/3">
+          <hero :color="color" class="object-cover rounded-3xl p-5" />
         </div>
       </div>
       <!-- <div class="w-full mt-4 xl:mt-12">

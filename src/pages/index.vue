@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 gap-4">
-    <main class="max-w-7xl xl:mx-auto h-screen p-4 xl:p-0">
+    <main class="max-w-7xl xl:mx-auto xl:h-screen p-4 xl:p-0">
       <div
         class="relative flex items-start justify-between lg:mt-10 sm:mt-12 md:mt-16"
       >
@@ -89,6 +89,17 @@
           <hero :color="color" class="object-cover w-5/5 rounded-3xl p-5" />
         </div>
       </div>
+      <!-- <div class="w-full mt-4 xl:mt-12">
+        <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
+          <div
+            v-for="i in logos"
+            :key="i"
+            class="relative shadow hover:shadow-lg bg-white rounded-md p-4 flex justify-center content-center"
+          >
+            <img :src="i" :alt="i" class="w-16" />
+          </div>
+        </div>
+      </div> -->
     </main>
     <div class="w-full absolute bottom-14" v-if="showButton">
       <div class="w-full grid grid-cols-1 justify-items-center">
@@ -136,13 +147,13 @@
               <div class="text-2xl font-bold mb-8">
                 {{  (i + 1) + "º Passo" }}
               </div>
-              <div class="flex justify-center">
+              <div class="flex justify-center h-28 mb-8">
                 <component :is="step.image" :class="step.class" />
               </div>
-              <div class="font-bold mt-8">
+              <div class="font-bold">
                 {{ step.title }}
               </div>
-              <div class="text-gray-600 text-xs">
+              <div class="text-gray-600 text-xs max-w-xs">
                 {{ step.description }}
               </div>
             </div>
@@ -278,12 +289,20 @@ export default {
 
     onBeforeUnmount(() => document.removeEventListener('scroll', handleScroll));
 
+    const logos = ref([
+      '../../src/assets/dourasoft.png',
+      '../../src/assets/i9tv.png',
+      '../../src/assets/portabilis.jpg',
+      '../../src/assets/TeachLearn.png',
+    ]);
+
     return {
       handleClick,
       color,
       steps,
       returnColor,
-      showButton
+      showButton,
+      logos
     }
   },
 };

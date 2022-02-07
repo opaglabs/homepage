@@ -12,10 +12,10 @@
     }"
   >
     <div class="flex items-center justify-between">
-      <div v-if="!noLogo" @click="changeColor" class="cursor-pointer hidden lg:block relative" v-ripple>
+      <div v-if="!noLogo" @click="changeColor" class="cursor-pointer hidden xl:block relative" v-ripple>
         <Logo class="h-16 w-auto text-white" />
       </div>
-      <h1 class="text-4xl tracking-tight font-extrabold px-4 lg:px-0">{{ title }}</h1>
+      <h1 class="text-4xl tracking-tight font-extrabold px-4 xl:px-0">{{ title }}</h1>
     </div>
   </div>
 </template>

@@ -1,8 +1,8 @@
 <template>
-  <div class="snap-center w-full relative pb-12" id="vamos-trabalhar-juntos">
+  <div class="snap-center w-full relative h-full xl:h-screen" id="vamos-trabalhar-juntos">
     <SectionTitle title="Vamos trabalhar juntos?" :noLogo="noLogo" />
 
-    <div class="max-w-screen-md mx-auto lg:mt-14 p-4 lg:p-0">
+    <div class="max-w-screen-md mx-auto xl:mt-14 p-4 xl:p-0">
       <div class="grid grid-cols-1 content-center">
         <div>
           <XInput

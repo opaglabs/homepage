@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl mx-auto">
-    <div>
+    <div class="h-full lg:h-screen">
       <SectionTitle title="Onde nos Encontrar?" no-logo />
         <section class="mb-12 p-4 lg:p-0">
           <div class="leading-snug">

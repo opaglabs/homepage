@@ -1,8 +1,8 @@
 <template>
   <div class="grid grid-cols-1 gap-4">
-    <main class="max-w-7xl mx-auto h-screen p-4 lg:p-0">
+    <main class="max-w-7xl xl:mx-auto h-screen p-4 xl:p-0">
       <div
-        class="relative flex items-start justify-between lg:mt-10 sm:mt-12 md:mt-16 xl:mt-28"
+        class="relative flex items-start justify-between lg:mt-10 sm:mt-12 md:mt-16"
       >
         <div class="sm:text-center lg:text-left">
           <h1
@@ -125,8 +125,8 @@
     </div>
     <div class="snap-center lg:h-screen w-full" id="o-que-fazemos">
       <section-title title="O que fazemos?" />
-      <div class="max-w-7xl mx-auto lg:mt-14 p-4 lg:p-0">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="max-w-7xl mx-auto lg:mt-14 p-4 xl:p-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div
             v-for="(step, i) in steps"
             :key="i"
@@ -148,7 +148,7 @@
             </div>
             <ChevronDoubleRightIcon
               v-if="i < steps.length - 1"
-              class="hidden lg:block w-8 lg:w-8"
+              class="hidden md:block w-8 lg:w-8"
               :class="returnColor"
             />
           </div>

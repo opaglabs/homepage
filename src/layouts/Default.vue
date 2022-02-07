@@ -1,12 +1,12 @@
 <template>
   <div class="bg-white">
-    <div class="grid grid-cols-1 gap-4 m-4 lg:m-0 overflow-x-hidden">
+    <div class="grid grid-cols-1 gap-4 m-4 xl:m-0 overflow-x-hidden">
       <div class="bg-white">
         <div class="max-w-7xl mx-auto">
           <nav class="flex justify-between" aria-label="Global">
             <div class="flex items-center justify-between w-full md:w-auto">
               <router-link v-ripple class="relative rounded-xl" @click="changeColor" to="/">
-                <logo class="lg:-mt-4 h-14 w-auto sm:h-28" />
+                <logo class="xl:-mt-4 h-14 w-auto sm:h-28" />
               </router-link>
               <div class="-mr-2 flex items-center md:hidden">
               </div>
@@ -17,7 +17,7 @@
                   v-for="item in navigation"
                   :key="item.name"
                   :to="item.href"
-                  class="px-2 py-1 lg:px-4 lg:py-2 font-medium relative border rounded-xl"
+                  class="px-2 py-1 xl:px-4 xl:py-2 font-medium relative border rounded-xl"
                   :class="{
                     'border-red-600 text-red-600': color === 'red',
                     'border-yellow-600 text-yellow-600': color === 'yellow',
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div v-if="showButton" class="fixed z-50 bottom-4 right-4 lg:bottom-8 lg:right-8">
+    <div v-if="showButton" class="fixed z-50 bottom-4 right-4 xl:bottom-8 xl:right-8">
       <button v-ripple @click="handleClick" class="border border-white relative rounded-full w-10 h-10 shadow-2xl flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110" :class="returnColor">
         <ChevronUpIcon class="text-white w-6" />
       </button>

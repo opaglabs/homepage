@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto">
     <div>
         <SectionTitle title="Portifólio de Projetos" no-logo />
-        <section class="md:flex md:space-x-10 items-start mb-12 p-4 lg:p-0">
+        <section class="md:flex md:space-x-10 items-start mb-12 p-4 xl:p-0">
           <div class="leading-snug">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
               <div
@@ -81,7 +81,7 @@
 
     <div>
       <SectionTitle title="Cursos Ministrados" no-logo />
-      <section class="md:flex md:space-x-10 items-start mb-12 p-4 lg:p-0">
+      <section class="md:flex md:space-x-10 items-start mb-12 p-4 xl:p-0">
         <div class="leading-snug">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
             <div
@@ -120,7 +120,7 @@
             <div
               v-for="projeto in cardsProjetosPublicos"
               :key="projeto.title"
-              class="relative shadow hover:shadow-lg bg-white rounded-md p-4 lg:p-0"
+              class="relative shadow hover:shadow-lg bg-white rounded-md p-4 xl:p-0"
             >
               <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
                 'text-red-700': color === 'red',

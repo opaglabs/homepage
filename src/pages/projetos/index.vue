@@ -114,13 +114,13 @@
 
     <div>
       <SectionTitle title="Projetos Públicos" no-logo />
-      <section class="items-start mb-12 p-4">
+      <section class="mb-12 p-4 lg:p-0">
         <div class="leading-snug">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8">
             <div
               v-for="projeto in cardsProjetosPublicos"
               :key="projeto.title"
-              class="relative shadow hover:shadow-lg bg-white rounded-md p-4 xl:p-0"
+              class="relative shadow hover:shadow-lg bg-white rounded-md p-4"
             >
               <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
                 'text-red-700': color === 'red',
@@ -155,12 +155,15 @@
         </div>
       </section>
     </div>
+
+    <WorkTogether />
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
 import SectionTitle from '../../components/section-title.vue'
+import WorkTogether from '../../components/work-together.vue'
   export default {
     data: () => ({
         cardsProjetos: [
@@ -264,6 +267,6 @@ import SectionTitle from '../../components/section-title.vue'
     computed: {
         ...mapGetters(["color"])
     },
-    components: { SectionTitle }
+    components: { SectionTitle, WorkTogether }
 }
 </script>

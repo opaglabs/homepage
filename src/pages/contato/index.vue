@@ -234,7 +234,7 @@
           </div>
         </section>
     </div>
-    <WorkTogether no-logo />
+    <WorkTogether />
   </div>
 </template>
 
@@ -244,7 +244,7 @@ import SectionTitle from "../../components/section-title.vue";
 import WorkTogether from "../../components/work-together.vue";
 export default {
     computed: {
-        ...mapGetters(["color"]),
+      ...mapGetters(["color"]),
     },
     components: { SectionTitle, WorkTogether }
 };

@@ -1,70 +1,62 @@
 <template>
   <div class="bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
-
-        <div class="pt-6 px-4 sm:px-6 lg:px-8">
-          <nav class="flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-            <div class="flex items-center flex-grow flex-shrink-0">
-              <div class="flex items-center justify-between w-full md:w-auto">
-                <router-link v-ripple class="relative rounded-xl" @click="changeColor" to="/">
-                  <span class="sr-only">Op.ag Logo</span>
-                  <svg :class="{
-                    'bg-red-600': color === 'red',
-                    'bg-yellow-600': color === 'yellow',
-                    'bg-green-600': color === 'green',
-                    'bg-blue-600': color === 'blue',
-                    'bg-indigo-600': color === 'indigo',
-                    'bg-purple-600': color === 'purple',
-                    'bg-pink-600': color === 'pink',
-                  }" class="cover h-20 w-auto sm:h-28 rounded-xl" id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-                    <rect width="512" height="512" style="fill: none"/>
-                    <g>
-                      <path d="M159.58,310.48a26.74,26.74,0,0,1-5.22,5.43,66.66,66.66,0,0,1-8.61,6,100.68,100.68,0,0,1-10.91,5.59,95.54,95.54,0,0,1-12.14,4.41,126.87,126.87,0,0,1-5.53,25.87,142,142,0,0,1-10.45,24.84A76.93,76.93,0,0,1,93.2,401.17q-7.38,7.21-14.75,7.21a26.28,26.28,0,0,1-8.15-1.77A32.87,32.87,0,0,1,60.47,401a36.38,36.38,0,0,1-8.15-9.26,24.35,24.35,0,0,1-3.38-13.09,94,94,0,0,1,1.85-17.34,157.25,157.25,0,0,1,5.07-19.55,136.11,136.11,0,0,1,8-19.26,112.06,112.06,0,0,1,10.29-16.76A53.27,53.27,0,0,1,86,294,22.45,22.45,0,0,1,99,289.6a11.63,11.63,0,0,1,6.61,2.21,36.38,36.38,0,0,1,6.3,5.58,61.31,61.31,0,0,1,5.68,7.35q2.61,4,4.77,7.21l.92,6.76a86.56,86.56,0,0,0,15.82-2.65Q147,314,159.58,310.48ZM99.65,335.17Q95,334.29,95,326.35a40.84,40.84,0,0,1,.77-7.35c.51-2.74,1.08-5.58,1.69-8.52q-4.31,5-8.76,14.55a178.74,178.74,0,0,0-8,20.43q-3.54,10.88-5.84,21.17a79.94,79.94,0,0,0-2.3,16.46q0,7.07,3.07,7.06t7.22-4.85a64.43,64.43,0,0,0,8.15-12.79,180.94,180.94,0,0,0,7.68-17.79,141.81,141.81,0,0,0,5.84-19.84,15.27,15.27,0,0,1-2.92.29Z" transform="translate(0 -1)" style="fill: #fff"/>
-                      <path d="M126.08,458.65a19.51,19.51,0,0,1-4.61-1,35.75,35.75,0,0,1-6.61-2.79,22.5,22.5,0,0,1-5.68-4.41,6.15,6.15,0,0,1-1.85-5.59q3.08-16.47,7.69-34.4t9.68-35.27q5.07-17.36,10.14-32.78t9.22-27.2q4.16-11.76,6.91-18.82c1.85-4.7,2.87-7.05,3.08-7.05a47.28,47.28,0,0,1,6.61-.15,63.84,63.84,0,0,1,7.52.74,44.18,44.18,0,0,1,6.46,1.47,10.11,10.11,0,0,1,3.69,1.76q-2.47.89-7.07,11.17t-10.14,25.87q8.59-17.93,16.28-29t12.61-11a10,10,0,0,1,4.45,1.76,52.89,52.89,0,0,1,6,4.27,40.74,40.74,0,0,1,5.54,5.44,14.48,14.48,0,0,1,3.07,5.29,30.24,30.24,0,0,1,.46,9.41,101.3,101.3,0,0,1-1.84,12.2A140.26,140.26,0,0,1,204,342.38q-2.31,7.2-5.07,14.55,8.91-6.18,16.44-12.5a71.6,71.6,0,0,0,11.83-12.2q1.55,4.71-1.23,10.59a49.45,49.45,0,0,1-8.6,12.2,125.46,125.46,0,0,1-13.53,12.49q-7.68,6.18-15.67,11.76a128.49,128.49,0,0,1-7.68,11.47,51.68,51.68,0,0,1-8.3,8.82,30.63,30.63,0,0,1-8.61,5.14,12.71,12.71,0,0,1-8.29.44,25.88,25.88,0,0,1-8.76-3.82,33.4,33.4,0,0,1-6.61-5.88q-3.07,10.29-5.53,20t-4.3,17.94q-1.85,8.22-2.92,14.84A68.75,68.75,0,0,0,126.08,458.65Zm62.39-152.29q-.93,0-5.23,5A128.81,128.81,0,0,0,173,325.76q-6,9.42-13.22,22.94a298.75,298.75,0,0,0-14,30.57l3.38,4.41A119.21,119.21,0,0,0,163,377.8a121.12,121.12,0,0,0,9.83-18.52q4.92-11.17,8.46-21.9t5.53-19.55Q188.78,309,188.47,306.36Z" transform="translate(0 -1)" style="fill: #fff"/>
-                      <path d="M251.47,393.68a14.32,14.32,0,0,1-1.08,4.41,24.14,24.14,0,0,1-3.22,5.88,18.89,18.89,0,0,1-5.53,5,15.74,15.74,0,0,1-8.3,2.06q-6.76,0-9.07-4.55a16.88,16.88,0,0,1-1.54-10.15,24.77,24.77,0,0,1,3.69-10.14q2.93-4.56,6.61-4.56c5.33,0,9.68,1,13.06,2.94A10.48,10.48,0,0,1,251.47,393.68Z" transform="translate(0 -1)" style="fill: #fff"/>
-                      <path d="M367,297.83q-2.14,3.24-6,10.73a182.87,182.87,0,0,0-8,18.53q-4.14,11-8.3,24.69a219.71,219.71,0,0,0-6.6,29q4.61-5.3,9.83-12.05t9.68-13.53q4.46-6.75,8-12.93a86.49,86.49,0,0,0,5.07-10c1.85.4,2.51,2.45,2,6.18A66.59,66.59,0,0,1,369,351.93a183,183,0,0,1-16.75,33.52,113.06,113.06,0,0,1-9.37,12.78q-4.45,5.16-7.22,5.15a11,11,0,0,1-6.15-2.35,41.26,41.26,0,0,1-6.45-5.59,39.84,39.84,0,0,1-5.23-6.76,12.1,12.1,0,0,1-2.15-5.88c0-2.16.1-4.6.31-7.35s.51-5.59.92-8.53q-2.76,7.36-6.15,14.7T304,395a57,57,0,0,1-6.61,9.7c-2.15,2.46-4.14,3.68-6,3.68a15.52,15.52,0,0,1-4.3-.88,23.23,23.23,0,0,1-5.84-2.95,25.37,25.37,0,0,1-5.69-5.29,17.64,17.64,0,0,1-3.53-7.64q-1.55-5.88-.46-16.46a163.08,163.08,0,0,1,4-22.5,210.67,210.67,0,0,1,7.53-24.1A131.75,131.75,0,0,1,293.42,307a56.79,56.79,0,0,1,12.14-14.7q6.45-5.29,13.21-3.53a39.67,39.67,0,0,1,9.84,4.26q4.61,2.81,8.91,6a51.14,51.14,0,0,1,4-7.79c1.23-1.86,2.25-2.79,3.07-2.79a22.74,22.74,0,0,1,6.3,1,64.7,64.7,0,0,1,6.76,2.35,32.51,32.51,0,0,1,5.84,3.08A16.43,16.43,0,0,1,367,297.83Zm-39.95,28.52c1-2.94,2-5.78,2.92-8.52s1.89-5.39,2.92-7.94c-2.26-2.16-4.3-3.19-6.15-3.09a8.15,8.15,0,0,0-5.22,2.5,43.05,43.05,0,0,0-7.38,10.14c-2.45,4.41-4.87,9.31-7.22,14.7s-4.51,10.93-6.45,16.61-3.64,11-5.07,16-2.51,9.36-3.23,13.08-1,6.27-.77,7.64c.62,0,2-1.61,4.15-4.85s4.86-7.59,8.14-13.08,6.92-11.95,10.91-19.4S322.77,334.78,327.07,326.35Z" transform="translate(0 -1)" style="fill: #fff"/>
-                      <path d="M406.05,288.13a8,8,0,0,1,2.77,1.33q2.15,1.32,4.76,3.08a31,31,0,0,1,4.77,4,18,18,0,0,1,3.07,4,16.94,16.94,0,0,1,9.37,1.62q4.77,2.2,6.3,9c2.87-.58,6.1-1.27,9.68-2.05s7.23-1.72,10.91-2.8,7.28-2.2,10.76-3.38a53,53,0,0,0,8.91-3.82,14.32,14.32,0,0,1-2.15,3.82c-1,1.18-2.3,2.55-3.84,4.12s-3.43,3.33-5.69,5.29a75.14,75.14,0,0,1-15.36,9.26,92.38,92.38,0,0,1-14.75,5.15,71,71,0,0,1-4.92,14.4,66.55,66.55,0,0,1-8,13.23,44.8,44.8,0,0,1-10.3,9.7,21.35,21.35,0,0,1-12.14,3.83,16.62,16.62,0,0,1-3.68-.3,41.23,41.23,0,0,0-5.54,3.38,13.75,13.75,0,0,0-2.76,2.5q10.14,5.3,18.74,10.73A92.08,92.08,0,0,1,421.27,395a39.54,39.54,0,0,1,8.29,10.73,13.22,13.22,0,0,1,.77,10.58q-1.84,4.71-7.22,11a84.6,84.6,0,0,1-12.6,11.91,83.54,83.54,0,0,1-15.68,9.55,39.05,39.05,0,0,1-16.74,4,35.11,35.11,0,0,1-27.82-12.35,29.8,29.8,0,0,1-6.14-11.61,26.8,26.8,0,0,1-.77-11.61,13.6,13.6,0,0,1,4-8.38,40.87,40.87,0,0,1,8.76-7.06,61.13,61.13,0,0,1,11.22-5.29A65.28,65.28,0,0,1,379,393.38a52.78,52.78,0,0,1-6.92-5.73,22.36,22.36,0,0,1-5.53-7.94,10,10,0,0,1,.77-8.82q2.46-4.54,11.68-8.67a2.88,2.88,0,0,1,1.23-.29,5.1,5.1,0,0,0,1.53-.3,41.09,41.09,0,0,1-7.68-6,20.87,20.87,0,0,1-4.92-7.49,41,41,0,0,1,.31-19.26,69.71,69.71,0,0,1,7.84-19.55,54.66,54.66,0,0,1,12.91-15.14Q397.75,288.13,406.05,288.13ZM405.13,426a7.67,7.67,0,0,0,.77-4.41,18.73,18.73,0,0,0-1.84-6.62,32.12,32.12,0,0,0-5.38-7.79A49.24,49.24,0,0,0,388.54,399a44,44,0,0,0-12.61,6.17,22.92,22.92,0,0,0-7.37,8.24,11.54,11.54,0,0,0-.77,8.82q1.38,4.4,6.92,7.64a23,23,0,0,0,9.06,2.79,30.56,30.56,0,0,0,9.07-.44,29.18,29.18,0,0,0,7.68-2.65A12.81,12.81,0,0,0,405.13,426Zm-7.38-72q6.47,0,12.3-7.94a65.64,65.64,0,0,0,9.22-17.93q-5.24-.89-6.46-3.53-1.23-4.11-.15-10.59c.72-4.3,1.28-7.54,1.69-9.7q-6.15,3.82-11.37,12.06A74.24,74.24,0,0,0,395,333a41.24,41.24,0,0,0-2.46,14.7C392.73,351.88,394.48,354,397.75,354Z" transform="translate(0 -1)" style="fill: #fff"/>
-                    </g>
-                  </svg>
-                </router-link>
-                <div class="-mr-2 flex items-center md:hidden">
-                </div>
+    <div class="grid grid-cols-1 gap-4 m-4 xl:m-0 overflow-x-hidden">
+      <div class="bg-white">
+        <div class="max-w-7xl mx-auto">
+          <nav class="flex justify-between" aria-label="Global">
+            <div class="flex items-center justify-between w-full md:w-auto">
+              <router-link v-ripple class="relative rounded-xl" @click="changeColor" to="/">
+                <logo class="xl:-mt-4 h-14 w-auto sm:h-28" />
+              </router-link>
+              <div class="-mr-2 flex items-center md:hidden">
               </div>
             </div>
-            <div class="ml-10 pr-4 space-x-3 md:space-x-8">
-              <router-link
-                v-for="item in navigation"
-                :key="item.name"
-                :to="item.href"
-                class="px-4 py-1 font-medium text-gray-500 hover:text-gray-900 relative"
-                v-ripple
-                :active-class="`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`"
-              >
-                {{ item.name }}
-              </router-link>
-              <!-- <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Log in</a> -->
+            <div class="flex items-center">
+              <div class="ml-10 pr-4 space-x-3 md:space-x-8">
+                <router-link
+                  v-for="item in navigation"
+                  :key="item.name"
+                  :to="item.href"
+                  class="px-2 py-1 xl:px-4 xl:py-2 font-medium relative border rounded-xl"
+                  :class="{
+                    'border-red-600 text-red-600': color === 'red',
+                    'border-yellow-600 text-yellow-600': color === 'yellow',
+                    'border-green-600 text-green-600': color === 'green',
+                    'border-blue-600 text-blue-600': color === 'blue',
+                    'border-indigo-600 text-indigo-600': color === 'indigo',
+                    'border-purple-600 text-purple-600': color === 'purple',
+                    'border-pink-600 text-pink-600': color === 'pink',
+                  }"
+                  v-ripple
+                  :active-class="`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`"
+                >
+                  {{ item.name }}
+                </router-link>
+              </div>
             </div>
           </nav>
         </div>
-        <router-view v-slot="{ Component }">
-          <transition name="scale" mode="out-in">
-            <component :is="Component" />
-          </transition>
-        </router-view>
-        <!-- <router-view /> -->
       </div>
     </div>
+    <div v-if="showButton" class="fixed z-50 bottom-4 right-4 xl:bottom-8 xl:right-8">
+      <button v-ripple @click="handleClick" class="border border-white relative rounded-full w-10 h-10 shadow-2xl flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110" :class="returnColor">
+        <ChevronUpIcon class="text-white w-6" />
+      </button>
+    </div>
+    <router-view v-slot="{ Component }">
+      <transition name="scale" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
 <script>
-// import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { MenuIcon, XIcon, ChevronUpIcon } from '@heroicons/vue/outline'
 import { mapGetters } from 'vuex'
+import Logo from '../components/logo.vue'
 
 const navigation = [
-  // { name: 'Início', href: '/' },
   // { name: 'Sobre', href: '/sobre' },
   { name: 'Projetos', href: '/projetos' },
   { name: 'Contato', href: '/contato' },
@@ -72,28 +64,11 @@ const navigation = [
 
 export default {
   components: {
-    // Popover: () => import.meta.env.SSR ? Popover : '<div>Loading...</div>',
-    // PopoverButton,
-    // PopoverPanel,
     MenuIcon,
-    XIcon
-  },
-  // setup() {
-  //   const colors = [
-  //     'red',
-  //     'yellow',
-  //     'green',
-  //     'blue',
-  //     'indigo',
-  //     'purple',
-  //     'pink'
-  //   ]
-  //   const color = colors[Math.floor(Math.random() * colors.length)]
-  //   return {
-  //     navigation,
-  //     color
-  //   }
-  // },
+    XIcon,
+    ChevronUpIcon,
+    Logo
+},
   data: () => ({
     navigation,
     colors: [
@@ -105,10 +80,22 @@ export default {
       'purple',
       'pink'
     ],
-    lastColor: null
+    lastColor: null,
+    showButton: false,
   }),
   computed: {
-    ...mapGetters(['color'])
+    ...mapGetters(['color']),
+    returnColor() {
+      return {
+        'bg-red-600': this.color === 'red',
+        'bg-yellow-600': this.color === 'yellow',
+        'bg-green-600': this.color === 'green',
+        'bg-blue-600': this.color === 'blue',
+        'bg-indigo-600': this.color === 'indigo',
+        'bg-purple-600': this.color === 'purple',
+        'bg-pink-600': this.color === 'pink',
+      }
+    }
   },
   methods: {
     changeColor () {
@@ -117,10 +104,33 @@ export default {
       if (newColor !== this.lastColor)
         this.$store.commit('color', this.colors[Math.floor(Math.random() * this.colors.length)])
       else this.changeColor()
+    },
+    handleScroll() {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > 200) {
+        this.showButton = true;
+      } else {
+        this.showButton = false;
+      }
+    },
+    handleClick() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      this.changeColor();
     }
   },
   created () {
     this.changeColor()
+  },
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    document.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>

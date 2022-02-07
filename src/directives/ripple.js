@@ -22,7 +22,7 @@ function showRipple (evt, el, ctx, forceCenter) {
     centerY = `${ (height - diameter) / 2 }px`,
     y = center ? centerY : `${ pos.top - top - radius }px`
 
-  innerNode.className = 'q-ripple__inner'
+  innerNode.className = 'x-ripple__inner'
   css(innerNode, {
     height: `${ diameter }px`,
     width: `${ diameter }px`,
@@ -30,7 +30,7 @@ function showRipple (evt, el, ctx, forceCenter) {
     opacity: 0
   })
 
-  node.className = `q-ripple${ color ? ' text-' + color : '' }`
+  node.className = `x-ripple${ color ? ' text-' + color : '' }`
   node.setAttribute('dir', 'ltr')
   node.appendChild(innerNode)
   el.appendChild(node)
@@ -42,13 +42,13 @@ function showRipple (evt, el, ctx, forceCenter) {
   ctx.abort.push(abort)
 
   let timer = setTimeout(() => {
-    innerNode.classList.add('q-ripple__inner--enter')
+    innerNode.classList.add('x-ripple__inner--enter')
     innerNode.style.transform = `translate3d(${ centerX },${ centerY },0) scale3d(1,1,1)`
     innerNode.style.opacity = 0.2
 
     timer = setTimeout(() => {
-      innerNode.classList.remove('q-ripple__inner--enter')
-      innerNode.classList.add('q-ripple__inner--leave')
+      innerNode.classList.remove('x-ripple__inner--enter')
+      innerNode.classList.add('x-ripple__inner--leave')
       innerNode.style.opacity = 0
 
       timer = setTimeout(() => {

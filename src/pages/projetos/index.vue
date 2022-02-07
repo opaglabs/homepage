@@ -156,7 +156,7 @@
       </section>
     </div>
 
-    <WorkTogether />
+    <!-- <WorkTogether /> -->
   </div>
 </template>
 

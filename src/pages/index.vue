@@ -1,93 +1,80 @@
 <template>
   <div class="grid grid-cols-1 gap-4">
-    <main class="max-w-7xl xl:mx-auto p-4 h-screen lg:h-calc-96 xl:p-0">
-      <div
-        class="flex justify-between lg:items-center h-full"
-      >
-        <div class="text-left w-full">
-          <h1
-            class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
-          >
-            <span class="block xl:inline">Engenharia de Software,</span>
-            {{ " " }}
-            <span
-              class="block xl:inline"
-              :class="returnColor"
-              >Plataformas & Negócios</span
-            >
-          </h1>
-          <p
-            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl lg:mx-0"
-          >
-            Acreditamos em uma nova forma de computação, onde os sistemas deixam
-            de ser engessados. Dessa forma, nosso desenvolvimento é aplicado
-            100% ao contexto do seu negócio. Bem-vindo à Computação Aconselhada.
-          </p>
-          <div class="mt-5 sm:mt-8 sm:flex lg:justify-start">
-            <div class="rounded-md shadow">
-              <router-link
-                to="/contato"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 relative"
-                v-ripple
-                :class="{
-                  'bg-red-600 hover:bg-red-600': color === 'red',
-                  'bg-yellow-600 hover:bg-yellow-600': color === 'yellow',
-                  'bg-green-600 hover:bg-green-600': color === 'green',
-                  'bg-blue-600 hover:bg-blue-600': color === 'blue',
-                  'bg-indigo-600 hover:bg-indigo-600': color === 'indigo',
-                  'bg-purple-600 hover:bg-purple-600': color === 'purple',
-                  'bg-pink-600 hover:bg-pink-600': color === 'pink',
-                }"
+    <main class="p-4 h-screen lg:h-calc-96">
+      <div class="max-w-screen-xl mx-auto">
+        <div
+          class="grid grid-cols-1 gap-4 lg:items-center h-full"
+        >
+          <div class="flex gap-4">
+            <div class="text-left w-full">
+              <h1
+                class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
-                Contato
-              </router-link>
+                <span class="block xl:inline">Engenharia de Software,</span>
+                {{ " " }}
+                <span
+                  class="block xl:inline"
+                  :class="returnColor"
+                  >Plataformas & Negócios</span
+                >
+              </h1>
+              <p
+                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl lg:mx-0"
+              >
+                Acreditamos em uma nova forma de computação, onde os sistemas deixam
+                de ser engessados. Dessa forma, nosso desenvolvimento é aplicado
+                100% ao contexto do seu negócio. Bem-vindo à Computação Aconselhada.
+              </p>
+              <div class="relative">
+                <div class="mt-5 sm:mt-8 flex justify-center -rotate-3 transition ease-in-out delay-75 hover:scale-110">
+                  <router-link
+                    to="/contato"
+                    class="px-8 py-3 text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black"
+                    v-ripple
+                    :class="{
+                      'bg-red-600 hover:bg-red-600': color === 'red',
+                      'bg-yellow-600 hover:bg-yellow-600': color === 'yellow',
+                      'bg-green-600 hover:bg-green-600': color === 'green',
+                      'bg-blue-600 hover:bg-blue-600': color === 'blue',
+                      'bg-indigo-600 hover:bg-indigo-600': color === 'indigo',
+                      'bg-purple-600 hover:bg-purple-600': color === 'purple',
+                      'bg-pink-600 hover:bg-pink-600': color === 'pink',
+                    }"
+                  >
+                    Contato
+                  </router-link>
+                </div>
+                <div class="absolute top-24 lg:left-20">
+                  <img src="@/assets/arrow2.png" alt="">
+                </div>
+              </div>
             </div>
-            <div class="mt-3 sm:mt-0 sm:ml-3">
-              <router-link
-                to="/projetos"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10 relative"
-                v-ripple
-                :class="{
-                  'text-red-600 bg-red-100 hover:bg-red-200': color === 'red',
-                  'text-yellow-600 bg-yellow-100 hover:bg-yellow-200':
-                    color === 'yellow',
-                  'text-green-600 bg-green-100 hover:bg-green-200':
-                    color === 'green',
-                  'text-blue-600 bg-blue-100 hover:bg-blue-200':
-                    color === 'blue',
-                  'text-indigo-600 bg-indigo-100 hover:bg-indigo-200':
-                    color === 'indigo',
-                  'text-purple-600 bg-purple-100 hover:bg-purple-200':
-                    color === 'purple',
-                  'text-pink-600 bg-pink-100 hover:bg-pink-200':
-                    color === 'pink',
-                }"
-              >
-                Projetos Realizados
-              </router-link>
+            <div class="hidden lg:block w-2/3">
+              <div class="grid grid-cols-1 border-4 border-black rounded-lg shadow-neobrutalism">
+                <div
+                  :class="{
+                    'bg-red-200': color === 'red',
+                    'bg-yellow-200': color === 'yellow',
+                    'bg-green-200': color === 'green',
+                    'bg-blue-200': color === 'blue',
+                    'bg-indigo-200': color === 'indigo',
+                    'bg-purple-200': color === 'purple',
+                    'bg-pink-200': color === 'pink',
+                  }"
+                  class="h-12 w-full flex items-center p-4 gap-2 text-white font-semibold border-b-4 border-black"
+                >
+                  <div class="w-4 h-4 rounded-full bg-red-400"></div>
+                  <div class="w-4 h-4 rounded-full bg-orange-400"></div>
+                  <div class="w-4 h-4 rounded-full bg-green-400"></div>
+                </div>
+                <div class="bg-white">
+                  <hero :color="color" class="object-cover rounded-3xl p-5" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- <div id="bubbles">
-          <div class="bubble x1">
-            <img src="https://via.placeholder.com/120x60/ffb200/000" />
-          </div>
-          <div class="bubble x2">
-            <img src="https://via.placeholder.com/120x60/ffb200/000" />
-          </div>
-          <div class="bubble x3">
-            <img src="https://via.placeholder.com/120x60/ffb200/000" />
-          </div>
-          <div class="bubble x4">
-            <img src="https://via.placeholder.com/120x60/ffb200/000" />
-          </div>
-          <div class="bubble x5">
-            <img src="https://via.placeholder.com/120x60/ffb200/000" />
-          </div>
-        </div> -->
-        <div class="hidden lg:block w-2/3">
-          <hero :color="color" class="object-cover rounded-3xl p-5" />
-        </div>
+
       </div>
       <!-- <div class="w-full mt-4 xl:mt-12">
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
@@ -105,7 +92,7 @@
       <div class="w-full grid grid-cols-1 justify-items-center">
         <div
           @click="handleClick"
-          class="mt-6 font-bold lg:hidden absolute top-1 animate-bounce bg-white px-2 py-1 rounded shadow-2xl"
+          class="mt-6 font-bold lg:hidden absolute top-1 animate-bounce bg-[#F8F8F8] px-2 py-1 rounded shadow-2xl"
           :class="returnColor"
         >
           Deslize para baixo
@@ -136,7 +123,7 @@
     </div>
     <div class="snap-center lg:h-screen w-full" id="o-que-fazemos">
       <section-title title="O que fazemos?" />
-      <div class="max-w-7xl mx-auto lg:mt-14 p-4 xl:p-0">
+      <div class="max-w-screen-xl mx-auto lg:mt-14 p-4 xl:p-0">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div
             v-for="(step, i) in steps"

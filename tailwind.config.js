@@ -30,6 +30,10 @@ module.exports = {
       height: {
         'calc-56': 'calc(100vh - 56px)',
         'calc-96': 'calc(100vh - 96px)'
+      },
+      boxShadow: {
+        'neobrutalism': '5px 5px 0px 1px #000000',
+        'neobrutalism-min': '2px 2px 0px 1px #000000'
       }
     },
   },

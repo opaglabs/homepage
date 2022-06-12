@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-white">
-    <div class="grid grid-cols-1 gap-4 m-4 xl:m-0 overflow-x-hidden">
-      <div class="bg-white">
-        <div class="max-w-7xl mx-auto">
+  <div class="">
+    <div class="sticky top-0 z-50 grid grid-cols-1 gap-4 m-4 xl:m-0 overflow-x-hidden bg-[#F8F8F8]">
+      <div class="bg-[#F8F8F8]">
+        <div class="max-w-screen-xl mx-auto">
           <nav class="flex justify-between" aria-label="Global">
-            <div class="flex items-center justify-between w-full md:w-auto">
+            <div class="flex items-center justify-between w-full md:w-auto py-4">
               <router-link v-ripple class="relative rounded-xl" @click="changeColor" to="/">
-                <logo class="xl:-mt-4 h-14 w-auto sm:h-28" />
+                <logo class="w-auto h-16 shadow-neobrutalism" />
               </router-link>
               <div class="-mr-2 flex items-center md:hidden">
               </div>
@@ -17,18 +17,18 @@
                   v-for="item in navigation"
                   :key="item.name"
                   :to="item.href"
-                  class="px-2 py-1 xl:px-4 xl:py-2 font-medium relative border rounded-xl"
+                  class="relative px-2 py-1 xl:px-4 xl:py-2 font-medium border rounded-xl border-black shadow-neobrutalism-min mt-1"
                   :class="{
-                    'border-red-600 text-red-600': color === 'red',
-                    'border-yellow-600 text-yellow-600': color === 'yellow',
-                    'border-green-600 text-green-600': color === 'green',
-                    'border-blue-600 text-blue-600': color === 'blue',
-                    'border-indigo-600 text-indigo-600': color === 'indigo',
-                    'border-purple-600 text-purple-600': color === 'purple',
-                    'border-pink-600 text-pink-600': color === 'pink',
+                    'text-red-600': color === 'red',
+                    'text-yellow-600': color === 'yellow',
+                    'text-green-600': color === 'green',
+                    'text-blue-600': color === 'blue',
+                    'text-indigo-600': color === 'indigo',
+                    'text-purple-600': color === 'purple',
+                    'text-pink-600': color === 'pink',
                   }"
                   v-ripple
-                  :active-class="`rounded-xl text-${color}-600 bg-${color}-100 hover:bg-${color}-200 hover:text-${color}-600`"
+                  :active-class="`rounded-xl text-white bg-${color}-600`"
                 >
                   {{ item.name }}
                 </router-link>
@@ -39,11 +39,11 @@
       </div>
     </div>
     <div v-if="showButton" class="fixed z-50 bottom-4 right-4 xl:bottom-8 xl:right-8">
-      <button v-ripple @click="handleClick" class="border border-white relative rounded-full w-10 h-10 shadow-2xl flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110" :class="returnColor">
+      <button v-ripple @click="handleClick" class="border border-black relative rounded-full w-10 h-10 shadow-neobrutalism-min flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110" :class="returnColor">
         <ChevronUpIcon class="text-white w-6" />
       </button>
     </div>
-    <router-view v-slot="{ Component }">
+    <router-view class="mt-8" v-slot="{ Component }">
       <transition name="scale" mode="out-in">
         <component :is="Component" />
       </transition>

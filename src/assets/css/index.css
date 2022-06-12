@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /*! @import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities { 
+@layer utilities {
+  h1, a {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px !important;
+  }
   .x-ripple {
     position: absolute;
     top: 0;

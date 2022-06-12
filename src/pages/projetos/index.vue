@@ -233,37 +233,37 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://quasar.dev/',
                     name: 'Quasar Framework',
-                    image: '@/assets/icons/Quasar_Logo.png'
+                    image: '/assets/icons/Quasar_Logo.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                   {
                     url: 'https://www.cypress.io/',
                     name: 'Cypress',
-                    image: '@/assets/icons/cypress.png'
+                    image: '/assets/icons/cypress.png'
                   },
                 ],
             },
@@ -279,47 +279,47 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://quasar.dev/',
                     name: 'Quasar Framework',
-                    image: '@/assets/icons/Quasar_Logo.png'
+                    image: '/assets/icons/Quasar_Logo.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                   {
                     url: 'https://nodejs.org/',
                     name: 'Node.Js',
-                    image: '@/assets/icons/nodejs.svg'
+                    image: '/assets/icons/nodejs.svg'
                   },
                   {
                     url: 'https://expressjs.com/',
                     name: 'Express .Js',
-                    image: '@/assets/icons/express.png'
+                    image: '/assets/icons/express.png'
                   },
                   {
                     url: 'https://www.postgresql.org/',
                     name: 'PostgreSQL',
-                    image: '@/assets/icons/postgresql.svg'
+                    image: '/assets/icons/postgresql.svg'
                   },
                 ],
             },
@@ -335,47 +335,47 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://quasar.dev/',
                     name: 'Quasar Framework',
-                    image: '@/assets/icons/Quasar_Logo.png'
+                    image: '/assets/icons/Quasar_Logo.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                   {
                     url: 'https://nodejs.org/',
                     name: 'Node.Js',
-                    image: '@/assets/icons/nodejs.svg'
+                    image: '/assets/icons/nodejs.svg'
                   },
                   {
                     url: 'https://expressjs.com/',
                     name: 'Express .Js',
-                    image: '@/assets/icons/express.png'
+                    image: '/assets/icons/express.png'
                   },
                   {
                     url: 'https://www.postgresql.org/',
                     name: 'PostgreSQL',
-                    image: '@/assets/icons/postgresql.svg'
+                    image: '/assets/icons/postgresql.svg'
                   },
                 ],
             },
@@ -391,47 +391,47 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://nuxtjs.org/',
                     name: 'Nuxt Framework',
-                    image: '@/assets/icons/Nuxt_logo.png'
+                    image: '/assets/icons/Nuxt_logo.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                   {
                     url: 'https://nodejs.org/',
                     name: 'Node.Js',
-                    image: '@/assets/icons/nodejs.svg'
+                    image: '/assets/icons/nodejs.svg'
                   },
                   {
                     url: 'https://expressjs.com/',
                     name: 'Express .Js',
-                    image: '@/assets/icons/express.png'
+                    image: '/assets/icons/express.png'
                   },
                   {
                     url: 'https://www.postgresql.org/',
                     name: 'PostgreSQL',
-                    image: '@/assets/icons/postgresql.svg'
+                    image: '/assets/icons/postgresql.svg'
                   },
                 ],
             },
@@ -447,47 +447,47 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://quasar.dev/',
                     name: 'Quasar Framework',
-                    image: '@/assets/icons/Quasar_Logo.png'
+                    image: '/assets/icons/Quasar_Logo.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                   {
                     url: 'https://nodejs.org/',
                     name: 'Node.Js',
-                    image: '@/assets/icons/nodejs.svg'
+                    image: '/assets/icons/nodejs.svg'
                   },
                   {
                     url: 'https://expressjs.com/',
                     name: 'Express .Js',
-                    image: '@/assets/icons/express.png'
+                    image: '/assets/icons/express.png'
                   },
                   {
                     url: 'https://www.postgresql.org/',
                     name: 'PostgreSQL',
-                    image: '@/assets/icons/postgresql.svg'
+                    image: '/assets/icons/postgresql.svg'
                   },
                 ],
             },
@@ -503,42 +503,42 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://reactjs.org/',
                     name: 'React.Js',
-                    image: '@/assets/icons/react.png'
+                    image: '/assets/icons/react.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                   {
                     url: 'https://nodejs.org/',
                     name: 'Node.Js',
-                    image: '@/assets/icons/nodejs.svg'
+                    image: '/assets/icons/nodejs.svg'
                   },
                   {
                     url: 'https://expressjs.com/',
                     name: 'Express .Js',
-                    image: '@/assets/icons/express.png'
+                    image: '/assets/icons/express.png'
                   },
                   {
                     url: 'https://www.postgresql.org/',
                     name: 'PostgreSQL',
-                    image: '@/assets/icons/postgresql.svg'
+                    image: '/assets/icons/postgresql.svg'
                   },
                 ],
             },
@@ -554,32 +554,32 @@ import WorkTogether from '../../components/work-together.vue'
                   // {
                   //   url: 'https://www.w3schools.com/html/',
                   //   name: 'HTML 5',
-                  //   image: '@/assets/icons/html5.svg'
+                  //   image: '/assets/icons/html5.svg'
                   // },
                   // {
                   //   url: 'https://www.w3schools.com/css/',
                   //   name: 'CSS 3',
-                  //   image: '@/assets/icons/css3-48.png'
+                  //   image: '/assets/icons/css3-48.png'
                   // },
                   {
                     url: 'https://www.javascript.com/',
                     name: 'Typescript',
-                    image: '@/assets/icons/javascript.svg'
+                    image: '/assets/icons/javascript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://getbootstrap.com/',
                     name: 'Bootstrap Framework',
-                    image: '@/assets/icons/bootstrap.svg'
+                    image: '/assets/icons/bootstrap.svg'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                 ],
             },
@@ -595,37 +595,37 @@ import WorkTogether from '../../components/work-together.vue'
                   {
                     url: 'https://www.typescriptlang.org/',
                     name: 'Typescript',
-                    image: '@/assets/icons/typescript.svg'
+                    image: '/assets/icons/typescript.svg'
                   },
                   {
                     url: 'https://vuejs.org/',
                     name: 'Vue.Js',
-                    image: '@/assets/icons/vue-js-48.png'
+                    image: '/assets/icons/vue-js-48.png'
                   },
                   {
                     url: 'https://vitejs.dev/',
                     name: 'Vite.Js',
-                    image: '@/assets/icons/vite.svg'
+                    image: '/assets/icons/vite.svg'
                   },
                   {
                     url: 'https://vitest.dev/',
                     name: 'Vitest',
-                    image: '@/assets/icons/vitest.svg'
+                    image: '/assets/icons/vitest.svg'
                   },
                   {
                     url: 'https://www.cypress.io/',
                     name: 'Cypress',
-                    image: '@/assets/icons/cypress.png'
+                    image: '/assets/icons/cypress.png'
                   },
                   {
                     url: 'https://tailwindcss.com/',
                     name: 'Tailwind CSS',
-                    image: '@/assets/icons/tailwindcss.png'
+                    image: '/assets/icons/tailwindcss.png'
                   },
                   {
                     url: 'https://sass-lang.com/',
                     name: 'Sass',
-                    image: '@/assets/icons/sass.svg'
+                    image: '/assets/icons/sass.svg'
                   },
                 ],
             },
@@ -639,27 +639,27 @@ import WorkTogether from '../../components/work-together.vue'
                   {
                     url: 'https://www.typescriptlang.org/',
                     name: 'Typescript',
-                    image: '@/assets/icons/typescript.svg'
+                    image: '/assets/icons/typescript.svg'
                   },
                   {
                     url: 'https://nodejs.org/',
                     name: 'Node.Js',
-                    image: '@/assets/icons/nodejs.svg'
+                    image: '/assets/icons/nodejs.svg'
                   },
                   {
                     url: 'https://adonisjs.com/',
                     name: 'Adonis.Js',
-                    image: '@/assets/icons/adonis.png'
+                    image: '/assets/icons/adonis.png'
                   },
                   {
                     url: 'https://www.docker.com/',
                     name: 'Docker',
-                    image: '@/assets/icons/docker.svg'
+                    image: '/assets/icons/docker.svg'
                   },
                   {
                     url: 'https://www.postgresql.org/',
                     name: 'PostgreSQL',
-                    image: '@/assets/icons/postgresql.svg'
+                    image: '/assets/icons/postgresql.svg'
                   },
                 ],
                 readMoreDescription: false

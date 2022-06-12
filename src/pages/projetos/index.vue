@@ -235,6 +235,7 @@ import imgDocker from '@/assets/icons/docker.svg';
 import imgBootstrap from '@/assets/icons/bootstrap.svg';
 import imgAdonis from '@/assets/icons/adonis.png';
 import imgTailwind from '@/assets/icons/tailwindcss.png';
+import imgMercadoPago from '@/assets/icons/mercadopago.png';
 
   export default {
     data: () => ({
@@ -670,14 +671,19 @@ import imgTailwind from '@/assets/icons/tailwindcss.png';
                     image: imgAdonis
                   },
                   {
+                    url: 'https://www.postgresql.org/',
+                    name: 'PostgreSQL',
+                    image: imgPg
+                  },
+                  {
                     url: 'https://www.docker.com/',
                     name: 'Docker',
                     image: imgDocker
                   },
                   {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
+                    url: 'https://www.mercadopago.com.br/developers/en/reference',
+                    name: 'Mercado Pago',
+                    image: imgMercadoPago
                   },
                 ],
                 readMoreDescription: false

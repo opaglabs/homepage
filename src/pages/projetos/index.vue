@@ -1,14 +1,14 @@
 <template>
   <div class="max-w-screen-xl mx-auto">
     <div>
-        <SectionTitle title="Portifólio de Projetos" no-logo />
+        <SectionTitle title="Portfólio de Projetos" no-logo />
         <section class="md:flex md:space-x-10 items-start mb-12 p-4 xl:p-0">
           <div class="leading-snug">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 px-4 lg:px-2">
               <div
                 v-for="projeto in cardsProjetos"
                 :key="projeto.title"
-                class="relative shadow-neobrutalism bg-white border border-solid border-black rounded-md transition ease-in-out delay-150 hover:scale-[102%] hover:z-10"
+                class="relative shadow-neobrutalism bg-white border border-solid border-black rounded-md transition ease-in-out delay-150 lg:hover:scale-[102%] hover:z-10"
               >
                 <div
                   v-if="projeto.readMoreDescription"
@@ -79,7 +79,7 @@
                 </div>
               </div>
               <div
-                class="relative shadow-neobrutalism border-black border cursor-pointer rounded-md transition ease-in-out delay-150 hover:scale-110 hover:z-10"
+                class="relative shadow-neobrutalism border-black border cursor-pointer rounded-md transition ease-in-out delay-150 lg:hover:scale-110 hover:z-10"
                 :class="{
                   'bg-red-50': color === 'red',
                   'bg-yellow-50': color === 'yellow',
@@ -137,7 +137,7 @@
             <div
               v-for="projeto in cardsCursos"
               :key="projeto.title"
-              class="relative shadow-neobrutalism bg-white border border-solid border-black rounded-md transition ease-in-out delay-150 hover:scale-[102%] hover:z-10"
+              class="relative shadow-neobrutalism bg-white border border-solid border-black rounded-md transition ease-in-out delay-150 lg:hover:scale-[102%] hover:z-10"
             >
               <div class="grid grid-cols-1 gap-4 p-4">
                 <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
@@ -168,14 +168,14 @@
       <SectionTitle title="Projetos Públicos" no-logo />
       <section class="mb-12 p-4 lg:p-0">
         <div class="leading-snug">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 px-4 lg:px-">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 px-4">
             <div
               v-for="projeto in cardsProjetosPublicos"
               :key="projeto.title"
-              class="relative shadow-neobrutalism bg-white border border-solid border-black rounded-md transition ease-in-out delay-150 hover:scale-[102%] hover:z-10"
+              class="relative shadow-neobrutalism bg-white border border-solid border-black rounded-md transition ease-in-out delay-150 lg:hover:scale-[102%] hover:z-10"
             >
-              <div class="grid grid-cols-1 gap-4 p-4" >
-                <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl" :class="{
+              <div class="grid grid-cols-1 gap-4 p-4">
+                <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-2xl truncate" :title="projeto.title" :class="{
                   'text-red-700': color === 'red',
                   'text-yellow-700': color === 'yellow',
                   'text-green-700': color === 'green',
@@ -186,26 +186,46 @@
                 }">
                   {{ projeto.title }}
                 </h1>
-                <p class="text-md">
+                <p v-if="projeto.description" class="text-md">
                   {{ projeto.description }}
                 </p>
+                <div v-if="projeto.techList" class="py-2 grid grid-cols-1 gap-4">
+                  <p class="text-gray-500 text-xs font-semibold">Principais tecnologias utilizadas</p>
+                  <div class="flex gap-2 h-7">
+                    <a
+                      v-for="tech in projeto.techList"
+                      :href="tech.url"
+                      target="_blank"
+                    >
+                      <span class="text-gray-500 text-xs font-semibold">
+                        <!-- {{ tech.name }} -->
+                        <img v-if="tech.image" class="w-1/2" :src="tech.image" :alt="tech.name" />
+                        <span v-else>
+                          {{ tech.name }}
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
                 <small class="text-gray-500 text-xs font-semibold">
                   <a v-if="!!projeto.url" :href="projeto.url" target="_blank">Acessar Repositório</a>
                 </small>
               </div>
             </div>
           </div>
-          <p class="text-md mt-5">
-            Veja mais projetos <a class="hover:underline" :class="{
-              'text-red-700': color === 'red',
-                'text-yellow-700': color === 'yellow',
-                'text-green-700': color === 'green',
-                'text-blue-700': color === 'blue',
-                'text-indigo-700': color === 'indigo',
-                'text-purple-700': color === 'purple',
-                'text-pink-700': color === 'pink',
-            }" href="https://github.com/otavio-paganotti" target="_blank">clicando aqui</a>.
-          </p>
+          <div class="grid grid-cols-1 gap-4 pt-8 px-4">
+            <p class="text-md mt-5">
+              Veja mais projetos <a class="hover:underline" :class="{
+                'text-red-700': color === 'red',
+                  'text-yellow-700': color === 'yellow',
+                  'text-green-700': color === 'green',
+                  'text-blue-700': color === 'blue',
+                  'text-indigo-700': color === 'indigo',
+                  'text-purple-700': color === 'purple',
+                  'text-pink-700': color === 'pink',
+              }" href="https://github.com/otavio-paganotti" target="_blank">clicando aqui</a>.
+            </p>
+          </div>
         </div>
       </section>
     </div>
@@ -218,24 +238,31 @@
 import { mapGetters } from 'vuex'
 import SectionTitle from '../../components/section-title.vue'
 import WorkTogether from '../../components/work-together.vue'
-import imgJs from '@/assets/icons/javascript.svg';
-import imgTs from '@/assets/icons/typescript.svg';
-import imgVue from '@/assets/icons/vue-js-48.png';
-import imgQuasar from '@/assets/icons/Quasar_Logo.png';
-import imgSass from '@/assets/icons/sass.svg';
-import imgNode from '@/assets/icons/nodejs.svg';
-import imgCypress from '@/assets/icons/cypress.png';
-import imgExpress from '@/assets/icons/express.png';
-import imgPg from '@/assets/icons/postgresql.svg';
-import imgReact from '@/assets/icons/react.png';
-import imgNuxt from '@/assets/icons/Nuxt_logo.png';
-import imgVite from '@/assets/icons/vite.svg';
-import imgVitest from '@/assets/icons/vitest.svg';
-import imgDocker from '@/assets/icons/docker.svg';
-import imgBootstrap from '@/assets/icons/bootstrap.svg';
-import imgAdonis from '@/assets/icons/adonis.png';
-import imgTailwind from '@/assets/icons/tailwindcss.png';
-import imgMercadoPago from '@/assets/icons/mercadopago.png';
+import {
+  js,
+  vue,
+  quasar,
+  sass,
+  cy,
+  node,
+  express,
+  pg,
+  nuxt,
+  react,
+  bootstrap,
+  ts,
+  vite,
+  vitest,
+  tailwind,
+  adonis,
+  docker,
+  mp,
+  honeybadger,
+  wpp,
+  socketio,
+  java,
+  rollup
+} from '@/data'
 
   export default {
     data: () => ({
@@ -249,41 +276,11 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://dourasoft.com.br/",
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javascript',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://quasar.dev/',
-                    name: 'Quasar Framework',
-                    image: imgQuasar
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
-                  {
-                    url: 'https://www.cypress.io/',
-                    name: 'Cypress',
-                    image: imgCypress
-                  },
+                  js,
+                  vue,
+                  quasar,
+                  sass,
+                  cy,
                 ],
             },
             {
@@ -295,51 +292,13 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: null,
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javascript',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://quasar.dev/',
-                    name: 'Quasar Framework',
-                    image: imgQuasar
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
-                  {
-                    url: 'https://nodejs.org/',
-                    name: 'Node.Js',
-                    image: imgNode
-                  },
-                  {
-                    url: 'https://expressjs.com/',
-                    name: 'Express .Js',
-                    image: imgExpress
-                  },
-                  {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
-                  },
+                  js,
+                  vue,
+                  quasar,
+                  sass,
+                  node,
+                  express,
+                  pg,
                 ],
             },
             {
@@ -351,51 +310,13 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://dourasoft.com.br/",
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javascript',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://quasar.dev/',
-                    name: 'Quasar Framework',
-                    image: imgQuasar
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
-                  {
-                    url: 'https://nodejs.org/',
-                    name: 'Node.Js',
-                    image: imgNode
-                  },
-                  {
-                    url: 'https://expressjs.com/',
-                    name: 'Express .Js',
-                    image: imgExpress
-                  },
-                  {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
-                  },
+                  js,
+                  vue,
+                  quasar,
+                  sass,
+                  node,
+                  express,
+                  pg,
                 ],
             },
             {
@@ -407,51 +328,13 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://kollabity.com",
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javascipt',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://nuxtjs.org/',
-                    name: 'Nuxt Framework',
-                    image: imgNuxt
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
-                  {
-                    url: 'https://nodejs.org/',
-                    name: 'Node.Js',
-                    image: imgNode
-                  },
-                  {
-                    url: 'https://expressjs.com/',
-                    name: 'Express .Js',
-                    image: imgExpress
-                  },
-                  {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
-                  },
+                  js,
+                  vue,
+                  nuxt,
+                  sass,
+                  node,
+                  express,
+                  pg,
                 ],
             },
             {
@@ -463,51 +346,13 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://app.teachlearn.com.br",
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javascript',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://quasar.dev/',
-                    name: 'Quasar Framework',
-                    image: imgQuasar
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
-                  {
-                    url: 'https://nodejs.org/',
-                    name: 'Node.Js',
-                    image: imgNode
-                  },
-                  {
-                    url: 'https://expressjs.com/',
-                    name: 'Express .Js',
-                    image: imgExpress
-                  },
-                  {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
-                  },
+                  js,
+                  vue,
+                  quasar,
+                  sass,
+                  node,
+                  express,
+                  pg,
                 ],
             },
             {
@@ -519,46 +364,12 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://certificados.teachlearn.com.br/",
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javascript',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://reactjs.org/',
-                    name: 'React.Js',
-                    image: imgReact
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
-                  {
-                    url: 'https://nodejs.org/',
-                    name: 'Node.Js',
-                    image: imgNode
-                  },
-                  {
-                    url: 'https://expressjs.com/',
-                    name: 'Express .Js',
-                    image: imgExpress
-                  },
-                  {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
-                  },
+                  js,
+                  react,
+                  sass,
+                  node,
+                  express,
+                  pg,
                 ],
             },
             {
@@ -570,36 +381,10 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://i9tv.com.br/",
                 readMoreDescription: false,
                 techList: [
-                  // {
-                  //   url: 'https://www.w3schools.com/html/',
-                  //   name: 'HTML 5',
-                  //   image: '/assets/icons/html5.svg'
-                  // },
-                  // {
-                  //   url: 'https://www.w3schools.com/css/',
-                  //   name: 'CSS 3',
-                  //   image: '/assets/icons/css3-48.png'
-                  // },
-                  {
-                    url: 'https://www.javascript.com/',
-                    name: 'Javacript',
-                    image: imgJs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://getbootstrap.com/',
-                    name: 'Bootstrap Framework',
-                    image: imgBootstrap
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
+                  js,
+                  vue,
+                  bootstrap,
+                  sass,
                 ],
             },
             {
@@ -611,41 +396,13 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 url: "https://portabilis.com.br/",
                 readMoreDescription: false,
                 techList: [
-                  {
-                    url: 'https://www.typescriptlang.org/',
-                    name: 'Typescript',
-                    image: imgTs
-                  },
-                  {
-                    url: 'https://vuejs.org/',
-                    name: 'Vue.Js',
-                    image: imgVue
-                  },
-                  {
-                    url: 'https://vitejs.dev/',
-                    name: 'Vite.Js',
-                    image: imgVite
-                  },
-                  {
-                    url: 'https://vitest.dev/',
-                    name: 'Vitest',
-                    image: imgVitest
-                  },
-                  {
-                    url: 'https://www.cypress.io/',
-                    name: 'Cypress',
-                    image: imgCypress
-                  },
-                  {
-                    url: 'https://tailwindcss.com/',
-                    name: 'Tailwind CSS',
-                    image: imgTailwind
-                  },
-                  {
-                    url: 'https://sass-lang.com/',
-                    name: 'Sass',
-                    image: imgSass
-                  },
+                  ts,
+                  vue,
+                  vite,
+                  vitest,
+                  cy,
+                  tailwind,
+                  sass,
                 ],
             },
             {
@@ -655,36 +412,12 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
                 description: "Criação de API que gerencia criação e vendas de rifas, assim como a integração API de pagamentos como Mercado Pago.",
                 date: "2022",
                 techList: [
-                  {
-                    url: 'https://www.typescriptlang.org/',
-                    name: 'Typescript',
-                    image: imgTs
-                  },
-                  {
-                    url: 'https://nodejs.org/',
-                    name: 'Node.Js',
-                    image: imgNode
-                  },
-                  {
-                    url: 'https://adonisjs.com/',
-                    name: 'Adonis.Js',
-                    image: imgAdonis
-                  },
-                  {
-                    url: 'https://www.postgresql.org/',
-                    name: 'PostgreSQL',
-                    image: imgPg
-                  },
-                  {
-                    url: 'https://www.docker.com/',
-                    name: 'Docker',
-                    image: imgDocker
-                  },
-                  {
-                    url: 'https://www.mercadopago.com.br/developers/en/reference',
-                    name: 'Mercado Pago',
-                    image: imgMercadoPago
-                  },
+                  ts,
+                  node,
+                  adonis,
+                  pg,
+                  docker,
+                  mp,
                 ],
                 readMoreDescription: false
             },
@@ -708,23 +441,59 @@ import imgMercadoPago from '@/assets/icons/mercadopago.png';
         ],
         cardsProjetosPublicos: [
             {
+                title: "Plugin Vite for Write and Rewrite a index.html inside a tmp folder",
+                techList: [
+                  ts,
+                  vite,
+                  rollup
+                ],
+                url: "https://github.com/otavio-paganotti/vite-plugin-rewrite-tmp-index"
+            },
+            {
+                title: "Honeybadger for Vue 3 Composition API",
+                techList: [
+                  js,
+                  vue,
+                  vite,
+                  honeybadger,
+                ],
+                url: "https://github.com/otavio-paganotti/honeybadger-vue3-composition-api"
+            },
+            {
                 title: "Wpp Sender",
-                description: "Vue.js",
+                techList: [
+                  js,
+                  vue,
+                  quasar,
+                  sass,
+                  wpp,
+                ],
                 url: "https://github.com/otavio-paganotti/whatsapp-sender"
             },
             {
                 title: "Chat Socket",
-                description: "Vue.js + Express",
+                techList: [
+                  js,
+                  vue,
+                  quasar,
+                  sass,
+                  express,
+                  socketio,
+                ],
                 url: "https://github.com/otavio-paganotti/chat-socket-vuejs"
             },
             {
                 title: "Battle Robot",
-                description: "Java",
+                techList: [
+                  java,
+                ],
                 url: "https://github.com/otavio-paganotti/robot-battle-java"
             },
             {
                 title: "Locadora",
-                description: "Java",
+                techList: [
+                  java,
+                ],
                 url: "https://github.com/otavio-paganotti/locadora-java-faculdade"
             }
         ]

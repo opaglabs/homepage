@@ -259,6 +259,16 @@ export default {
       'text-pink-600': color.value === 'pink',
     }));
 
+    const returnColor2 = computed(() => ({
+      'text-red-800': color.value === 'red',
+      'text-yellow-800': color.value === 'yellow',
+      'text-green-800': color.value === 'green',
+      'text-blue-800': color.value === 'blue',
+      'text-indigo-800': color.value === 'indigo',
+      'text-purple-800': color.value === 'purple',
+      'text-pink-800': color.value === 'pink',
+    }));
+
     const showButton = ref(true);
 
     const handleClick = () => {
@@ -295,7 +305,8 @@ export default {
       steps,
       returnColor,
       showButton,
-      logos
+      logos,
+      returnColor2,
     }
   },
 };

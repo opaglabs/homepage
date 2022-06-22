@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-screen-xl mx-auto">
     <div class="h-full lg:h-screen">
-      <SectionTitle title="Onde nos Encontrar?" no-logo />
+      <SectionTitle title="Onde me Encontrar?" no-logo />
         <section class="mb-12 p-4 lg:p-0">
           <div class="leading-snug">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 px-4 lg:px-2">

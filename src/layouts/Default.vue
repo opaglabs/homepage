@@ -1,7 +1,7 @@
 <template>
-  <div class="">
+  <div>
     <div class="sticky top-0 z-50 grid grid-cols-1 gap-4 m-4 xl:m-0 overflow-x-hidden bg-[#F8F8F8]">
-      <div class="bg-[#F8F8F8]">
+      <div>
         <div class="max-w-screen-xl mx-auto">
           <nav class="flex justify-between" aria-label="Global">
             <div class="flex items-center justify-between w-full md:w-auto py-4">

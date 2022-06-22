@@ -10,23 +10,29 @@
               <h1
                 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
               >
-                <span class="block xl:inline">Engenharia de Software,</span>
+                <span class="block xl:inline">Engenheiro de Software, especialista em</span>
                 {{ " " }}
                 <span
-                  class="block xl:inline"
+                  class="block"
                   :class="returnColor"
-                  >Plataformas & Negócios</span
+                  >Plataformas para</span
                 >
+                <span
+                  class="block"
+                  :class="returnColor2"
+                >
+                  seu Negócio
+                </span>
               </h1>
               <p
                 class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl lg:mx-0"
               >
-                Acreditamos em uma nova forma de computação, onde os sistemas deixam
-                de ser engessados. Dessa forma, nosso desenvolvimento é aplicado
+                Acredito em uma nova forma de computação, onde os sistemas deixam
+                de ser engessados. Dessa forma, meu fluxo de desenvolvimento é aplicado
                 100% ao contexto do seu negócio. Bem-vindo à Computação Aconselhada.
               </p>
               <div class="relative">
-                <div class="mt-5 sm:mt-8 flex justify-center -rotate-3 transition ease-in-out delay-75 hover:scale-110">
+                <div class="relative top-20 lg:top-0 mt-5 sm:mt-8 flex justify-center -rotate-3 transition ease-in-out delay-75 lg:hover:scale-110">
                   <router-link
                     to="/contato"
                     class="px-8 py-3 text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black"
@@ -44,9 +50,9 @@
                     Contato
                   </router-link>
                 </div>
-                <div class="absolute top-24 lg:left-20">
+                <!-- <div class="hidden lg:block absolute top-24 lg:left-20">
                   <img src="@/assets/arrow2.png" alt="">
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="hidden lg:block w-2/3">

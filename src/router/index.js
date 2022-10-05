@@ -12,7 +12,7 @@ const routes = [
       {
         path: '/',
         name: 'Início',
-        component: () => import('../pages/index.vue')
+        component: () => import('../pages/new-index.vue')
       },
     ]
   }

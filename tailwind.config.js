@@ -34,6 +34,14 @@ module.exports = {
       boxShadow: {
         'neobrutalism': '5px 5px 0px 1px #000000',
         'neobrutalism-min': '2px 2px 0px 1px #000000'
+      },
+      colors: {
+        'base-1': '#00B4FF',
+        'base-2': '#DB2777',
+        'base-3': '#CEBD26',
+        'base-4': '#7C08FC',
+        'base-5': '#DB2777',
+        'base-6': '#41B883',
       }
     },
   },

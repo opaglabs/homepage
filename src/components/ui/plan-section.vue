@@ -51,10 +51,18 @@
             </ul>
           </div>
           <div class="flex justify-center p-4">
-            <button class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-3 transition ease-in-out delay-75 lg:hover:scale-[105%]">Entre em contato</button>
+            <button @click="handleClick" class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-3 transition ease-in-out delay-75 lg:hover:scale-[105%]">Entre em contato</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const handleClick = () => {
+  document.getElementById('contato')?.scrollIntoView({
+    behavior: 'smooth',
+  });
+};
+</script>

@@ -12,6 +12,7 @@
     "@heroicons/vue": "^1.0.3",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10",
+    "vue3-carousel": "^0.1.48",
     "vuex": "^4.0.2",
     "vuex-router-sync": "^5.0.0"
   },

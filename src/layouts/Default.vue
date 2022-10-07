@@ -3,8 +3,15 @@
     <div class="sticky flex top-0 z-50 gap-2 xl:m-0 overflow-x-hidden">
       <div class="w-2/12 hidden lg:block"></div>
       <div class="w-full lg:w-8/12">
-        <nav class="flex justify-start">
+        <nav class="flex justify-between items-center">
           <img src="@/assets/images/logo.svg" />
+          <div class="flex gap-4">
+            <a href="https://github.com/otavio-paganotti/otavio-paganotti.github.io" target="_blank" class="bg-[#f8f8f8] px-4 shadow-neobrutalism border-2 border-black flex gap-2 items-center">
+              Github
+              <ExternalLinkIcon class="h-4 relative -top-[.1rem]" />
+            </a>
+            <button class="bg-base-4 text-white px-4 shadow-neobrutalism border-2 border-black bebas" disabled>pt-BR</button>
+          </div>
         </nav>
       </div>
     </div>
@@ -22,7 +29,7 @@
 </template>
 
 <script>
-import { MenuIcon, XIcon, ChevronUpIcon } from '@heroicons/vue/outline'
+import { MenuIcon, XIcon, ChevronUpIcon, ExternalLinkIcon } from '@heroicons/vue/outline'
 import Logo from '../components/logo.vue'
 
 const navigation = [
@@ -36,7 +43,8 @@ export default {
     MenuIcon,
     XIcon,
     ChevronUpIcon,
-    Logo
+    Logo,
+    ExternalLinkIcon
 },
   data: () => ({
     navigation,

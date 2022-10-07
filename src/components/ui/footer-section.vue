@@ -1,7 +1,7 @@
 <template>
   <hr>
   <footer class="p-4">
-    <div class="flex gap-12 justify-center">
+    <div class="flex flex-col lg:flex-row lg:gap-12 gap-4 justify-center">
       <a
         href="https://www.instagram.com/opag.software/"
         target="_blank"

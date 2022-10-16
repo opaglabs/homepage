@@ -12,7 +12,7 @@
             {{ project.description }}
             &nbsp;<span
               class="text-blue-700 hover:underline cursor-pointer"
-              @click="(handleClick(project) as MouseEvent | undefined)"
+              @click="() => handleClick(project)"
               >{{
                 project.readMoreDescription ? 'Ler menos' : 'Leia mais'
               }}</span
@@ -34,9 +34,7 @@
               {{ project.description.substring(0, 100) + '...' }}
               &nbsp;<span
                 class="text-blue-700 hover:underline cursor-pointer"
-                @click="
-                  (handleClick(project) as MouseEvent | undefined)
-                "
+                @click="() => handleClick(project)"
                 >{{
                   project.readMoreDescription ? 'Ler menos' : 'Leia mais'
                 }}</span

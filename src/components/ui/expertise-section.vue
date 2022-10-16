@@ -46,7 +46,7 @@
       </div>
       <button
         class="col-span-3 flex justify-center cursor-pointer bg-base-6 shadow-neobrutalism-min text-white font-bold"
-        @click="showAll = !showAll"
+        @click="handleClickShowAll"
       >
         {{ !showAll ? 'Ver mais' : 'Ver menos' }}
       </button>
@@ -78,6 +78,11 @@ import WebAccessibilityImg from '@/assets/images/expertise/web-accessibility.png
 import { ref } from 'vue';
 
 const showAll = ref(false);
+
+const handleClickShowAll = (): MouseEvent | undefined => {
+  showAll.value = !showAll.value;
+  return;
+}
 
 const whatWeDo = ref([
   {

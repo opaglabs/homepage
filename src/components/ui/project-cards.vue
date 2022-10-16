@@ -12,9 +12,7 @@
             {{ project.description }}
             &nbsp;<span
               class="text-blue-700 hover:underline cursor-pointer"
-              @click="
-                project.readMoreDescription = !project.readMoreDescription
-              "
+              @click="(handleClick(project) as MouseEvent | undefined)"
               >{{
                 project.readMoreDescription ? 'Ler menos' : 'Leia mais'
               }}</span
@@ -37,7 +35,7 @@
               &nbsp;<span
                 class="text-blue-700 hover:underline cursor-pointer"
                 @click="
-                  project.readMoreDescription = !project.readMoreDescription
+                  (handleClick(project) as MouseEvent | undefined)
                 "
                 >{{
                   project.readMoreDescription ? 'Ler menos' : 'Leia mais'
@@ -50,8 +48,8 @@
               </p>
               <div class="flex gap-2 h-7">
                 <a
-                  v-for="tech in project.techList"
-                  :key="tech"
+                  v-for="(tech, i) in project.techList"
+                  :key="i"
                   :href="tech.url"
                   target="_blank"
                 >
@@ -113,9 +111,33 @@ import {
   vitest,
   vue,
 } from '@/data';
+import { Nullable } from '@/types';
 import { ref } from 'vue';
 
-const projectCards = ref(
+interface Tech {
+  name: string;
+  url: string;
+  image: string;
+}; 
+
+interface ProjectCard {
+  title: string;
+  company: string;
+  job: string;
+  description: string;
+  readMoreDescription: boolean;
+  techList: Tech[];
+  date: string;
+  url: Nullable<string>;
+}
+
+const handleClick = (project: ProjectCard): MouseEvent | undefined => {
+  project.readMoreDescription = !project.readMoreDescription;
+
+  return undefined;
+}
+
+const projectCards = ref<ProjectCard[]>(
   [
     {
       title: 'AGIL Online',
@@ -212,6 +234,7 @@ const projectCards = ref(
       description:
         'Criação de API que gerencia criação e vendas de rifas, assim como a integração API de pagamentos como Mercado Pago.',
       date: '2022',
+      url: null,
       techList: [ts, node, adonis, pg, docker, mp],
       readMoreDescription: false,
     },

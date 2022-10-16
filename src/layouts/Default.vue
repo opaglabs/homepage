@@ -29,7 +29,6 @@
       class="fixed z-50 bottom-4 right-4 xl:bottom-8 xl:right-8"
     >
       <button
-        v-ripple
         class="bg-base-5 border-2 border-black relative w-10 h-10 shadow-neobrutalism-min flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110"
         @click="handleClick"
       >

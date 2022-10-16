@@ -1,22 +1,19 @@
-import {
-  createRouter,
-  createWebHistory
-} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
     name: 'Default',
-    component: () => import('../layouts/Default.vue'),
+    component: () => import('@/layouts/Default.vue'),
     children: [
       {
         path: '/',
         name: 'Início',
-        component: () => import('../pages/new-index.vue')
+        component: () => import('@/pages/index.vue'),
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export default createRouter({
   history: createWebHistory(),
@@ -24,5 +21,5 @@ export default createRouter({
     // always scroll to top
     return { top: 0 };
   },
-  routes
-})
+  routes,
+});

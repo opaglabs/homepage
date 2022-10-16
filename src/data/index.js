@@ -38,215 +38,215 @@ import imgMocha from '@/assets/icons/mocha.svg';
 export const html = {
   url: 'https://www.w3schools.com/html/',
   name: 'HTML 5',
-  image: imgHtml
+  image: imgHtml,
 };
 
 export const css = {
   url: 'https://www.w3schools.com/css/',
   name: 'CSS 3',
-  image: imgCss
+  image: imgCss,
 };
 
 export const js = {
   url: 'https://www.javascript.com/',
   name: 'Javascript',
-  image: imgJs
-}
+  image: imgJs,
+};
 
 export const vue = {
   url: 'https://vuejs.org/',
   name: 'Vue.Js',
-  image: imgVue
+  image: imgVue,
 };
 
 export const quasar = {
   url: 'https://quasar.dev/',
   name: 'Quasar Framework',
-  image: imgQuasar
+  image: imgQuasar,
 };
 
 export const sass = {
   url: 'https://sass-lang.com/',
   name: 'Sass',
-  image: imgSass
+  image: imgSass,
 };
 
 export const cy = {
   url: 'https://www.cypress.io/',
   name: 'Cypress',
-  image: imgCypress
+  image: imgCypress,
 };
 
 export const node = {
   url: 'https://nodejs.org/',
   name: 'Node.Js',
-  image: imgNode
+  image: imgNode,
 };
 
 export const express = {
   url: 'https://expressjs.com/',
   name: 'Express .Js',
-  image: imgExpress
+  image: imgExpress,
 };
 
 export const pg = {
   url: 'https://www.postgresql.org/',
   name: 'PostgreSQL',
-  image: imgPg
+  image: imgPg,
 };
 
 export const nuxt = {
   url: 'https://nuxtjs.org/',
   name: 'Nuxt Framework',
-  image: imgNuxt
+  image: imgNuxt,
 };
 
 export const react = {
   url: 'https://reactjs.org/',
   name: 'React.Js',
-  image: imgReact
+  image: imgReact,
 };
 
 export const bootstrap = {
   url: 'https://getbootstrap.com/',
   name: 'Bootstrap Framework',
-  image: imgBootstrap
+  image: imgBootstrap,
 };
 
 export const ts = {
   url: 'https://www.typescriptlang.org/',
   name: 'Typescript',
-  image: imgTs
+  image: imgTs,
 };
 
 export const vite = {
   url: 'https://vitejs.dev/',
   name: 'Vite.Js',
-  image: imgVite
+  image: imgVite,
 };
 
 export const vitest = {
   url: 'https://vitest.dev/',
   name: 'Vitest',
-  image: imgVitest
+  image: imgVitest,
 };
 
 export const tailwind = {
   url: 'https://tailwindcss.com/',
   name: 'Tailwind CSS',
-  image: imgTailwind
+  image: imgTailwind,
 };
 
 export const adonis = {
   url: 'https://adonisjs.com/',
   name: 'Adonis.Js',
-  image: imgAdonis
+  image: imgAdonis,
 };
 
 export const docker = {
   url: 'https://www.docker.com/',
   name: 'Docker',
-  image: imgDocker
+  image: imgDocker,
 };
 
 export const mp = {
   url: 'https://www.mercadopago.com.br/developers/en/reference',
   name: 'Mercado Pago',
-  image: imgMercadoPago
+  image: imgMercadoPago,
 };
 
 export const honeybadger = {
   url: 'https://www.honeybadger.io/',
   name: 'Honeybadger',
-  image: imgHoneybadger
+  image: imgHoneybadger,
 };
 
 export const wpp = {
   url: 'https://www.whatsapp.com/',
   name: 'WhatsApp',
-  image: imgWpp
+  image: imgWpp,
 };
 
 export const socketio = {
   url: 'https://socket.io/',
   name: 'Socket io',
-  image: imgSocketio
+  image: imgSocketio,
 };
 
 export const java = {
   url: 'https://www.java.com/',
   name: 'Java',
-  image: imgJava
+  image: imgJava,
 };
 
 export const rollup = {
   url: 'https://rollupjs.org/guide/en/',
   name: 'Rollup Js',
-  image: imgRollup
+  image: imgRollup,
 };
 
 export const webpack = {
   url: 'https://webpack.js.org/',
   name: 'Webpack Js',
-  image: imgWebpack
+  image: imgWebpack,
 };
 
 export const c = {
   url: 'https://www.w3schools.com/c/',
   name: 'C Language Programing',
-  image: imgC
+  image: imgC,
 };
 
 export const cpp = {
   url: 'https://cplusplus.com/doc/tutorial/',
   name: 'C++ Language Programing',
-  image: imgCpp
+  image: imgCpp,
 };
 
 export const php = {
   url: 'https://www.php.net/',
   name: 'PHP Language Programing',
-  image: imgPhp
+  image: imgPhp,
 };
 
 export const py = {
   url: 'https://www.python.org/',
   name: 'Python Language Programing',
-  image: imgPy
+  image: imgPy,
 };
 
 export const ino = {
   url: 'https://www.arduino.cc/',
   name: 'Arduino Language Programing',
-  image: imgIno
+  image: imgIno,
 };
 
 export const materialize = {
   url: 'https://materializecss.com/',
   name: 'Materialize CSS',
-  image: imgMaterialize
+  image: imgMaterialize,
 };
 
 export const vuetify = {
   url: 'https://vuetifyjs.com/en/',
   name: 'Vuetify CSS',
-  image: imgVuetify
+  image: imgVuetify,
 };
 
 export const cake = {
   url: 'https://cakephp.org/',
   name: 'Cake PHP',
-  image: imgCake
+  image: imgCake,
 };
 
 export const jest = {
   url: 'https://jestjs.io/',
   name: 'Jest Test Runner',
-  image: imgJest
+  image: imgJest,
 };
 
 export const mocha = {
   url: 'https://mochajs.org/',
   name: 'Mocha Test Runner',
-  image: imgMocha
+  image: imgMocha,
 };

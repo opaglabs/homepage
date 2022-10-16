@@ -5,7 +5,9 @@
     </div>
     <div class="w-full lg:w-8/12 py-4 px-4 lg:px-0">
       <div class="w-full lg:mb-24 mb-12">
-        <h2 class="text-4xl tracking-tight font-extrabold">Planos de Consultoria</h2>
+        <h2 class="text-4xl tracking-tight font-extrabold">
+          Planos de Consultoria
+        </h2>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div
@@ -16,12 +18,16 @@
           </div>
           <div class="p-4">
             <ul>
-              <li v-for="i in 12">Item {{ i }}</li>
+              <li v-for="i in 12" :key="i">Item {{ i }}</li>
             </ul>
           </div>
           <div class="flex flex-col justify-center items-center p-4">
             <span>A partir de</span>
-            <button class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-1 transition ease-in-out delay-75 lg:hover:scale-[105%]">R$ 27,00</button>
+            <button
+              class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-1 transition ease-in-out delay-75 lg:hover:scale-[105%]"
+            >
+              R$ 27,00
+            </button>
           </div>
         </div>
         <div
@@ -32,11 +38,15 @@
           </div>
           <div class="p-4">
             <ul>
-              <li v-for="i in 12">Item {{ i }}</li>
+              <li v-for="i in 12" :key="i">Item {{ i }}</li>
             </ul>
           </div>
           <div class="flex justify-center p-4">
-            <button class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-2 transition ease-in-out delay-75 lg:hover:scale-[105%]">R$ 187,00</button>
+            <button
+              class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-2 transition ease-in-out delay-75 lg:hover:scale-[105%]"
+            >
+              R$ 187,00
+            </button>
           </div>
         </div>
         <div
@@ -47,11 +57,16 @@
           </div>
           <div class="p-4">
             <ul>
-              <li v-for="i in 12">Item {{ i }}</li>
+              <li v-for="i in 12" :key="i">Item {{ i }}</li>
             </ul>
           </div>
           <div class="flex justify-center p-4">
-            <button @click="handleClick" class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-3 transition ease-in-out delay-75 lg:hover:scale-[105%]">Entre em contato</button>
+            <button
+              class="px-8 py-3 text-base font-medium text-white md:py-4 md:text-lg md:px-10 relative shadow-neobrutalism border-2 border-black bg-base-3 transition ease-in-out delay-75 lg:hover:scale-[105%]"
+              @click="handleClick"
+            >
+              Entre em contato
+            </button>
           </div>
         </div>
       </div>
@@ -60,9 +75,10 @@
 </template>
 
 <script setup lang="ts">
-const handleClick = () => {
+const handleClick = (): MouseEvent | undefined => {
   document.getElementById('contato')?.scrollIntoView({
     behavior: 'smooth',
   });
+  return;
 };
 </script>

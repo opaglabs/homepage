@@ -9,8 +9,9 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
         <div
+          v-for="(item, i) in contactCards"
+          :key="i"
           class="relative shadow-neobrutalism bg-white border-2 border-solid border-black transition ease-in-out delay-150 hover:scale-[102%] hover:z-10"
-          v-for="item in contactCards"
         >
           <div class="grid grid-cols-1 gap-4 p-4">
             <div class="flex gap-4">
@@ -33,34 +34,29 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import { useStore } from "vuex";
+import gbIcon from '@/assets/images/icons/github.svg';
 import igIcon from '@/assets/images/icons/instagram.svg';
 import inIcon from '@/assets/images/icons/linkedin.svg';
-import gbIcon from '@/assets/images/icons/github.svg';
-
-const store = useStore();
-
-const color = computed(() => store.getters.color);
+import { ref } from 'vue';
 
 const contactCards = ref([
   {
     icon: igIcon,
-    title: "Instagram",
-    description: "opag.software",
-    link: "https://www.instagram.com/opag.software/",
+    title: 'Instagram',
+    description: 'opag.software',
+    link: 'https://www.instagram.com/opag.software/',
   },
   {
     icon: inIcon,
-    title: "LinkedIn",
-    description: "otavio-paganotti",
-    link: "https://www.linkedin.com/in/otavio-paganotti/",
+    title: 'LinkedIn',
+    description: 'otavio-paganotti',
+    link: 'https://www.linkedin.com/in/otavio-paganotti/',
   },
   {
     icon: gbIcon,
-    title: "Github",
-    description: "otavio-paganotti",
-    link: "https://github.com/otavio-paganotti",
+    title: 'Github',
+    description: 'otavio-paganotti',
+    link: 'https://github.com/otavio-paganotti',
   },
 ]);
 </script>

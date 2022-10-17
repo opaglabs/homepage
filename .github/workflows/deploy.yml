@@ -1,0 +1,38 @@
+name: Deploy and Publishes
+
+on:
+  push:
+    branches: [main, staging]
+
+jobs:
+  deploy:
+    environment:
+      name: ${{ github.ref_name }}
+
+    name: Setup all needed for deploy ${{ github.ref_name }} repository
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+
+      - name: Checkout homepage
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: 🐈 Yarn
+        run: yarn install --frozen-lockfile --ignore-engines --non-interactive --silent
+
+      - name: ⚙️ Build
+        run: ./node_modules/cross-env/src/bin/cross-env.js VITE_GOOGLE_TAG_MANAGER=${{ secrets.GOOGLE_TAG_MANAGER }} yarn --ignore-engines --non-interactive --silent build --base=${{ secrets.BASE_URL }}
+
+      - name: 🚀 Deploy & Publishes
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken:  ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages publish 'dist' --project-name=opag-homepage --branch=${{ github.ref_name }}

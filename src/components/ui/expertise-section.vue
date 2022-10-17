@@ -9,21 +9,24 @@
       >
         Minhas especialidades
       </h2>
-      <div class="col-span-3"
+      <div
+        class="col-span-3"
         :class="[
           {
             'h-[21rem] overflow-hidden': !showAll,
-          }
+          },
         ]"
       >
         <div class="flex gap-4 flex-wrap justify-start">
           <div
             v-for="(item, index) in whatWeDo"
+            :key="index"
             class="shadow-neobrutalism border border-black flex-[1_0_100%] md:flex-[1_0_40%] lg:flex-[1_0_30%]"
           >
             <div class="flex gap-2 p-2" :class="[item.color]">
               <div
                 v-for="i in index + 1"
+                :key="i"
                 class="h-4 w-4 rounded-full bg-white"
               ></div>
             </div>
@@ -41,7 +44,10 @@
           </div>
         </div>
       </div>
-      <button class="col-span-3 flex justify-center cursor-pointer bg-base-6 shadow-neobrutalism-min text-white font-bold" @click="showAll = !showAll">
+      <button
+        class="col-span-3 flex justify-center cursor-pointer bg-base-6 shadow-neobrutalism-min text-white font-bold"
+        @click="handleClickShowAll"
+      >
         {{ !showAll ? 'Ver mais' : 'Ver menos' }}
       </button>
     </div>
@@ -55,23 +61,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import AnalysisImg from '@/assets/images/expertise/analysis.png';
+import CloudComputingImg from '@/assets/images/expertise/cloud-computing.png';
+import DashboardLayoutImg from '@/assets/images/expertise/dashboard-layout.png';
+import DiagramImg from '@/assets/images/expertise/diagram.png';
 import DirectionCenterImg from '@/assets/images/expertise/direction-center.png';
 import GrowUpImg from '@/assets/images/expertise/grow-up.png';
+import KanbanImg from '@/assets/images/expertise/kanban.png';
+import MulticastImg from '@/assets/images/expertise/multicast.png';
 import Performance1Img from '@/assets/images/expertise/performance-1.png';
 import Performance2Img from '@/assets/images/expertise/performance-2.png';
-import TypescriptImg from '@/assets/images/expertise/typescript.png';
-import MulticastImg from '@/assets/images/expertise/multicast.png';
-import DashboardLayoutImg from '@/assets/images/expertise/dashboard-layout.png';
-import KanbanImg from '@/assets/images/expertise/kanban.png';
 import SolutionImg from '@/assets/images/expertise/solution.png';
-import CloudComputingImg from '@/assets/images/expertise/cloud-computing.png';
-import AnalysisImg from '@/assets/images/expertise/analysis.png';
 import SourceCodeImg from '@/assets/images/expertise/source-code.png';
+import TypescriptImg from '@/assets/images/expertise/typescript.png';
 import WebAccessibilityImg from '@/assets/images/expertise/web-accessibility.png';
-import DiagramImg from '@/assets/images/expertise/diagram.png';
+import { ref } from 'vue';
 
 const showAll = ref(false);
+
+const handleClickShowAll = (): MouseEvent | undefined => {
+  showAll.value = !showAll.value;
+  return;
+}
 
 const whatWeDo = ref([
   {

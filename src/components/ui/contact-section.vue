@@ -20,11 +20,12 @@
             </div>
             <p class="text-xl mt-1">{{ item.description }}</p>
             <a
-              class="px-8 py-3 border-2 border-black shadow-neobrutalism text-base font-medium md:py-4 md:text-lg md:px-10 flex justify-center"
+              class="px-8 py-3 border-2 border-black shadow-neobrutalism text-base font-medium md:py-4 md:text-lg md:px-10 flex justify-center items-center gap-4"
               :href="item.link"
               target="_blank"
             >
               Visualizar Perfil
+              <ExternalLinkIcon class="h-4 relative -top-[.1rem]" />
             </a>
           </div>
         </div>
@@ -34,6 +35,7 @@
 </template>
 
 <script setup lang="ts">
+import { ExternalLinkIcon } from '@heroicons/vue/outline';
 import gbIcon from '@/assets/images/icons/github.svg';
 import igIcon from '@/assets/images/icons/instagram.svg';
 import inIcon from '@/assets/images/icons/linkedin.svg';

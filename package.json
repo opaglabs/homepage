@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.3",
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.10",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.2",
     "vue3-carousel": "^0.2.4"
   },
   "devDependencies": {
@@ -20,8 +20,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "@vitejs/plugin-vue": "^3.1.2",
-    "@vue/compiler-sfc": "^3.0.5",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.5",
     "cross-env": "^7.0.3",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",

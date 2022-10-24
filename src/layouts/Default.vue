@@ -7,7 +7,7 @@
           <img src="@/assets/images/logo.svg" />
           <div class="flex gap-4">
             <a
-              href="https://github.com/otavio-paganotti/otavio-paganotti.github.io"
+              href="https://github.com/opaglabs/homepage"
               target="_blank"
               class="bg-[#f8f8f8] px-4 shadow-neobrutalism border-2 border-black flex gap-2 items-center"
             >

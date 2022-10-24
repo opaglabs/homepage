@@ -7,7 +7,7 @@
       <div class="w-full">
         <h2 class="text-4xl tracking-tight font-extrabold">Contato</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8">
         <div
           v-for="(item, i) in contactCards"
           :key="i"
@@ -21,7 +21,7 @@
             <p class="text-xl mt-1">{{ item.description }}</p>
             <a
               class="px-8 py-3 border-2 border-black shadow-neobrutalism text-base font-medium md:py-4 md:text-lg md:px-10 flex justify-center"
-              href="https://www.linkedin.com/in/otavio-paganotti/"
+              :href="item.link"
               target="_blank"
             >
               Visualizar Perfil
@@ -57,6 +57,12 @@ const contactCards = ref([
     title: 'Github',
     description: 'otavio-paganotti',
     link: 'https://github.com/otavio-paganotti',
+  },
+  {
+    icon: gbIcon,
+    title: 'Opag\'s Github Organization',
+    description: 'opaglabs',
+    link: 'https://github.com/opaglabs',
   },
 ]);
 </script>

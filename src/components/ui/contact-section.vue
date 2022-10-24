@@ -7,7 +7,7 @@
       <div class="w-full">
         <h2 class="text-4xl tracking-tight font-extrabold">Contato</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8">
         <div
           v-for="(item, i) in contactCards"
           :key="i"

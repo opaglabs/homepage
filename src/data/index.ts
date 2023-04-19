@@ -26,6 +26,7 @@ import imgReact from '@/assets/icons/react.png';
 import imgRollup from '@/assets/icons/rollup.png';
 import imgSass from '@/assets/icons/sass.svg';
 import imgSocketio from '@/assets/icons/socketio.png';
+import imgSupabase from '@/assets/icons/supabase.png';
 import imgTailwind from '@/assets/icons/tailwindcss.png';
 import imgTs from '@/assets/icons/typescript.svg';
 import imgVite from '@/assets/icons/vite.svg';
@@ -249,4 +250,10 @@ export const mocha = {
   url: 'https://mochajs.org/',
   name: 'Mocha Test Runner',
   image: imgMocha,
+};
+
+export const supabase = {
+  url: 'https://supabase.com/',
+  name: 'Supabase',
+  image: imgSupabase,
 };

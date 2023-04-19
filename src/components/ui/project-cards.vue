@@ -103,6 +103,7 @@ import {
   quasar,
   react,
   sass,
+  supabase,
   tailwind,
   ts,
   vite,
@@ -234,6 +235,28 @@ const projectCards = ref<ProjectCard[]>(
       date: '2022',
       url: null,
       techList: [ts, node, adonis, pg, docker, mp],
+      readMoreDescription: false,
+    },
+    {
+      title: 'RifaIsso Front-end',
+      company: 'RifaIsso',
+      job: 'Front-end',
+      description:
+        'Recriação arquitetural do front-end da plataforma RifaIsso, utilizando a nova API criada. O projeto foi desenvolvido utilizando o framework Nuxt.js, e o design foi herdado de versões anteriores, utilizando o framework TailwindCSS.',
+      date: '2022-2023',
+      url: 'https://rifaisso.com.br/',
+      techList: [ts, vue, nuxt, tailwind, sass],
+      readMoreDescription: false,
+    },
+    {
+      title: 'Gow Club',
+      company: 'Gow',
+      job: 'Full-stack',
+      description:
+        'Plataforma de Eventos, contendo uma vitrine virtual, que promove facilidade ao se encontrar eventos, e que permite a criação de eventos de maneira simples e rápida.',
+      date: '2023',
+      url: 'https://gowclub.com.br/',
+      techList: [ts, vue, nuxt, tailwind, sass, supabase],
       readMoreDescription: false,
     },
   ].reverse()

@@ -24,12 +24,12 @@
             class="shadow-neobrutalism border border-black flex-[1_0_100%] md:flex-[1_0_40%] lg:flex-[1_0_30%]"
           >
             <div class="p-4 flex gap-2">
-              <div class="basis-1/6 h-12 py-2 rounded flex items-center justify-center" :class="[item.color]">
+              <div class="basis-1/6 h-12 py-2 rounded flex items-center justify-center">
                 <img :src="item.icon" class="h-8 w-8" />
               </div>
               <div class="basis-3/4 flex flex-col relative">
-                <div class="font-extrabold tracking-tight">
-                  {{ item.title }}
+                <div class="font-extrabold tracking-tight flex justify-center text-white text-center" :class="[item.color]">
+                  <span class="drop-shadow-lg">{{ item.title }}</span>
                 </div>
                 <div class="line-clamp-3">
                   {{ item.content }}

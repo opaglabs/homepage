@@ -1,5 +1,5 @@
 <template>
-  <Carousel class="py-12" :items-to-show="2.2">
+  <Carousel class="py-12" :items-to-show="getScreenSize">
     <Slide v-for="project in projectCards" :key="project.title">
       <div class="carousel__item">
         <div
@@ -110,8 +110,9 @@ import {
   vitest,
   vue,
 } from '@/data';
+import { computed, ref } from 'vue';
 import { Nullable } from '@/types';
-import { ref } from 'vue';
+import { useWindowSize } from '@vueuse/core';
 
 interface Tech {
   name: string;
@@ -261,6 +262,10 @@ const projectCards = ref<ProjectCard[]>(
     },
   ].reverse()
 );
+
+const { width } = useWindowSize();
+
+const getScreenSize = computed(() => width.value > 768 ? 2.2 : 1.1);
 </script>
 
 <style>

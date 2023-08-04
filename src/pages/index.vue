@@ -50,6 +50,18 @@
         <project-cards />
       </div>
     </div>
+    <div class="bg-neutral-100 relative flex gap-2">
+      <div class="w-8/12 mx-auto">
+        <div class="py-4">
+          <div class="w-full">
+            <h2 class="text-4xl text-center tracking-tight font-extrabold text-base-2">
+              Empresas
+            </h2>
+          </div>
+        </div>
+        <company-cards />
+      </div>
+    </div>
     <div class="relative mt-8">
       <contact-section />
     </div>
@@ -63,6 +75,7 @@
 </template>
 
 <script setup lang="ts">
+import CompanyCards from '@/components/ui/company-cards.vue';
 import ContactButton from '@/components/ui/contact-button.vue';
 import ContactSection from '@/components/ui/contact-section.vue';
 import ExpertiseSection from '@/components/ui/expertise-section.vue';

@@ -16,6 +16,7 @@ import imgJs from '@/assets/icons/javascript.svg';
 import imgMaterialize from '@/assets/icons/materialize.png';
 import imgMercadoPago from '@/assets/icons/mercadopago.png';
 import imgMocha from '@/assets/icons/mocha.svg';
+import imgMongoDB from '@/assets/icons/mongodb.svg';
 import imgNode from '@/assets/icons/nodejs.svg';
 import imgNuxt from '@/assets/icons/Nuxt_logo.png';
 import imgPg from '@/assets/icons/postgresql.svg';
@@ -24,6 +25,7 @@ import imgPy from '@/assets/icons/py.png';
 import imgQuasar from '@/assets/icons/Quasar_Logo.png';
 import imgReact from '@/assets/icons/react.png';
 import imgRollup from '@/assets/icons/rollup.png';
+import imgRubyOnRails from '@/assets/icons/ruby-on-rails.svg';
 import imgSass from '@/assets/icons/sass.svg';
 import imgSocketio from '@/assets/icons/socketio.png';
 import imgSupabase from '@/assets/icons/supabase.png';
@@ -256,4 +258,16 @@ export const supabase = {
   url: 'https://supabase.com/',
   name: 'Supabase',
   image: imgSupabase,
+};
+
+export const rails = {
+  url: 'https://rubyonrails.org/',
+  name: 'Ruby on Rails',
+  image: imgRubyOnRails,
+};
+
+export const mongo = {
+  url: 'https://www.mongodb.com/',
+  name: 'Mongo DB',
+  image: imgMongoDB,
 };

@@ -96,11 +96,14 @@ import {
   docker,
   express,
   js,
+  mongo,
   mp,
   node,
   nuxt,
   pg,
+  php,
   quasar,
+  rails,
   react,
   sass,
   supabase,
@@ -109,6 +112,7 @@ import {
   vite,
   vitest,
   vue,
+  webpack
 } from '@/data';
 import { computed, ref } from 'vue';
 import { Nullable } from '@/types';
@@ -151,11 +155,11 @@ const projectCards = ref<ProjectCard[]>(
       techList: [js, vue, quasar, sass, cy],
     },
     {
-      title: 'Comandas APP',
+      title: 'Comandas APP Back-end',
       company: 'Comandas APP',
-      job: 'Fullstack & Gestão',
+      job: 'Full-stack',
       description:
-        ' Comandas APP surgiu como uma proposta para popularizar a adoção de tecnologias para gestão de bares e restaurantes de maneira que até estabelecimentos das classes D e C poderão desfrutar de alta tecnologia e conseguir escalar seus negócios para patamares nunca antes vistos.',
+        'Comandas APP surgiu como uma proposta para popularizar a adoção de tecnologias para gestão de bares e restaurantes de maneira que até estabelecimentos das classes D e C poderão desfrutar de alta tecnologia e conseguir escalar seus negócios para patamares nunca antes vistos.',
       date: '2020',
       url: null,
       readMoreDescription: false,
@@ -164,7 +168,7 @@ const projectCards = ref<ProjectCard[]>(
     {
       title: 'Sistema para medir NPS®',
       company: 'DouraSoft do Brasil',
-      job: 'Fullstack',
+      job: 'Full-stack',
       description:
         'Com a proposta de realizar pesquisas de lealdade de clientes, esse sistema foi desenvolvido sob medida para um cliente com grande base de clientes, e que precisa acompanhar as métricas o tempo todo para melhorar as estratégias do seu negócio.',
       date: '2020',
@@ -175,7 +179,7 @@ const projectCards = ref<ProjectCard[]>(
     {
       title: 'Kollabity',
       company: 'Kollabity',
-      job: 'Fullstack',
+      job: 'Full-stack',
       description:
         'Plataforma voltada para profissionais da Engenharia Mecânica e outras Engenharias correlatas, disponibilizando dados importantes sobre ferramentas e procedimentos, e também educa estes profissionais para o mercado.',
       date: '2020 - 2021',
@@ -186,7 +190,7 @@ const projectCards = ref<ProjectCard[]>(
     {
       title: 'Teach Learn',
       company: 'Teach Learn',
-      job: 'Fullstack',
+      job: 'Full-stack',
       description:
         'Criação de uma plataforma especializada em educação, nos moldes de Google Classroom e Moodle, porém, com algumas peculiaridades e regras de negócios únicos. O projeto foi desenhado do zero, sem depender de nenhum gerenciador de conteúdo e nenhum engessamento, proporcionando assim, uma vasta oportunidade de customização e adição de novas funcionalidades.',
       date: '2021',
@@ -197,7 +201,7 @@ const projectCards = ref<ProjectCard[]>(
     {
       title: 'Gerador de Certificados',
       company: 'Teach Learn',
-      job: 'Fullstack',
+      job: 'Full-stack',
       description:
         'Criação de uma plataforma focada em realizar geração de certificados, como por exemplo, certificados de conclusão de curso, certificados de participação em eventos, certificados de participação em projetos, etc.',
       date: '2021',
@@ -217,15 +221,45 @@ const projectCards = ref<ProjectCard[]>(
       techList: [js, vue, bootstrap, sass],
     },
     {
-      title: 'Engenheiro de Software Front-end',
-      company: 'Portabilis',
+      title: 'Pré-Matrícula Digital',
+      company: 'Portábilis',
       job: 'Front-end',
       description:
-        'Desenvolvimento de plataforma voltada para atender escolas públicas, diminuir desigualdades e promover equidade social no Brasil.',
-      date: '2021 - Presente',
+        'Manutenção e evolução tecnológica de uma plataforma para realizar pré-matrículas de alunos em escolas públicas, com o objetivo de facilitar o processo de matrícula e também de gerar dados para o governo.',
+      date: '2021 - 2023',
       url: 'https://portabilis.com.br/',
       readMoreDescription: false,
       techList: [ts, vue, vite, vitest, cy, tailwind, sass],
+    },
+    {
+      title: 'i-Educar',
+      company: 'Portábilis',
+      job: 'Front-end',
+      description: 'Manutenção e evolução tecnológica de uma das principais plataformas de gestão escolar do país, sendo um software livre que descomplica e torna mais eficaz a gestão dos processos escolares, matrículas e dados de alunos.',
+      date: '2021 - 2023',
+      url: 'https://portabilis.com.br/',
+      readMoreDescription: false,
+      techList: [ts, vue, vite, vitest, cy, tailwind, sass, php],
+    },
+    {
+      title: 'i-Diário',
+      company: 'Portábilis',
+      job: 'Front-end',
+      description: 'Evolução tecnológica da plataforma que ajuda o professor a cuidar do aprendizado dos seus alunos ao invés de se preocupar com a burocracia.',
+      date: '2022 - 2023',
+      url: 'https://portabilis.com.br/',
+      readMoreDescription: false,
+      techList: [ts, vue, vite, vitest, cy, tailwind, sass, rails],
+    },
+    {
+      title: 'Portábilis SAS',
+      company: 'Portábilis',
+      job: 'Front-end',
+      description: 'Evolução tecnológica da plataforma para Assistência Social que unifica e integra dos serviços do Sistema Único de Assistência Social (SUAS), possibilitando uma gestão mais inteligente por meio de dados e tecnologia.',
+      date: '2022 - 2023',
+      url: 'https://portabilis.com.br/',
+      readMoreDescription: false,
+      techList: [ts, vue, vite, vitest, cy, tailwind, sass, rails],
     },
     {
       title: 'RifaIsso Back-end',
@@ -258,6 +292,16 @@ const projectCards = ref<ProjectCard[]>(
       date: '2023',
       url: 'https://gowclub.com.br/',
       techList: [ts, vue, nuxt, tailwind, sass, supabase],
+      readMoreDescription: false,
+    },
+    {
+      title: 'Portal Oi Soluções',
+      company: 'OI S/A',
+      job: 'Full-stack',
+      description: 'Portal de serviços da Oi Soluções, que permite a contratação de serviços, gerenciamento de serviços contratados, e acesso a informações de faturas.',
+      date: '2023-presente',
+      url: 'https://portaloisolucoes.oi.com.br/',
+      techList: [js, webpack, react, node, express, mongo, docker],
       readMoreDescription: false,
     },
   ].reverse()

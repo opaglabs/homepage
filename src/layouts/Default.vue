@@ -7,31 +7,22 @@
           <img src="@/assets/images/logo.svg" />
           <div class="flex gap-4">
             <a
-              href="https://github.com/opaglabs/homepage"
-              target="_blank"
-              class="bg-[#f8f8f8] px-4 shadow-neobrutalism border-2 border-black flex gap-2 items-center"
-            >
+href="https://github.com/opaglabs/homepage" target="_blank"
+              class="bg-[#f8f8f8] px-4 shadow-neobrutalism border-2 border-black flex gap-2 items-center">
               Github
               <ArrowTopRightOnSquareIcon class="h-4 relative -top-[.1rem]" />
             </a>
-            <button
-              class="bg-base-4 text-white px-4 shadow-neobrutalism border-2 border-black bebas"
-              disabled
-            >
+            <button class="bg-base-4 text-white px-4 shadow-neobrutalism border-2 border-black bebas" disabled>
               pt-BR
             </button>
           </div>
         </nav>
       </div>
     </div>
-    <div
-      v-if="showButton"
-      class="fixed z-50 bottom-4 right-4 xl:bottom-8 xl:right-8"
-    >
+    <div v-if="showButton" class="fixed z-50 bottom-4 right-4 xl:bottom-8 xl:right-8">
       <button
         class="bg-base-5 border-2 border-black relative w-10 h-10 shadow-neobrutalism-min flex justify-center items-center md:transition md:ease-in-out hover:-translate-y-1 hover:scale-110"
-        @click="handleClick"
-      >
+        @click="handleClick">
         <ChevronUpIcon class="text-white w-6" />
       </button>
     </div>
@@ -45,8 +36,8 @@
 
 <script setup lang="ts">
 import {
+  ArrowTopRightOnSquareIcon,
   ChevronUpIcon,
-  ArrowTopRightOnSquareIcon
 } from '@heroicons/vue/24/outline';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 

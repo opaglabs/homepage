@@ -12,7 +12,7 @@
               class="bg-[#f8f8f8] px-4 shadow-neobrutalism border-2 border-black flex gap-2 items-center"
             >
               Github
-              <ExternalLinkIcon class="h-4 relative -top-[.1rem]" />
+              <ArrowTopRightOnSquareIcon class="h-4 relative -top-[.1rem]" />
             </a>
             <button
               class="bg-base-4 text-white px-4 shadow-neobrutalism border-2 border-black bebas"
@@ -46,8 +46,8 @@
 <script setup lang="ts">
 import {
   ChevronUpIcon,
-  ExternalLinkIcon
-} from '@heroicons/vue/outline';
+  ArrowTopRightOnSquareIcon
+} from '@heroicons/vue/24/outline';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
 const showButton = ref(false);

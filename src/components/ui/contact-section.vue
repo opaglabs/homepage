@@ -25,7 +25,7 @@
               target="_blank"
             >
               Visualizar Perfil
-              <ExternalLinkIcon class="h-4 relative -top-[.1rem]" />
+              <ArrowTopRightOnSquareIcon class="h-4 relative -top-[.1rem]" />
             </a>
           </div>
         </div>
@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { ExternalLinkIcon } from '@heroicons/vue/outline';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline';
 import gbIcon from '@/assets/images/icons/github.svg';
 import igIcon from '@/assets/images/icons/instagram.svg';
 import inIcon from '@/assets/images/icons/linkedin.svg';
